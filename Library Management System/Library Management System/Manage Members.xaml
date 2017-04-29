@@ -1,0 +1,23 @@
+﻿<Window x:Class="Library_Management_System.Manage_Members"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_Management_System"
+        mc:Ignorable="d"
+        Title="Manage Members" Height="325" Width="550">
+    <Grid>
+        <Button x:Name="btn_addnew" Content="Add New" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btn_setpackage" Content="Set Package" HorizontalAlignment="Left" Margin="104,10,0,0" VerticalAlignment="Top" Width="75" Click="btn_setpackage_Click"/>
+        <Button x:Name="btn_memberdetails" Content="Member Details" HorizontalAlignment="Left" Margin="195,10,0,0" VerticalAlignment="Top" Width="97" />
+        <Button x:Name="btn_issue" Content="Issue / Return" HorizontalAlignment="Left" Margin="312,10,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="btn_explore" Content="Explore Members" HorizontalAlignment="Left" Margin="424,10,0,0" VerticalAlignment="Top" Width="104"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Height="204" Width="524"/>
+        <Label x:Name="lbl_search" Content="Search" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_search" HorizontalAlignment="Right" Height="26" Margin="0,50,308,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <Label x:Name="lbl_field" Content="Field" HorizontalAlignment="Left" Margin="256,47,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cmb_field" HorizontalAlignment="Left" Margin="312,50,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_viewall" Content="View All" HorizontalAlignment="Left" Margin="453,50,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.506,0.335" Height="22"/>
+
+    </Grid>
+</Window>

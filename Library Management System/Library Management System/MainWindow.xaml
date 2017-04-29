@@ -1,0 +1,18 @@
+﻿<Window x:Class="Library_Management_System.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_Management_System"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="343.204" Width="468.932">
+    <Grid>
+        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="26" Margin="156,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" ToolTip="User Name"/>
+        <Label x:Name="lbl_username" Content="User Name" HorizontalAlignment="Left" Margin="61,81,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_exit" Content="Exit" HorizontalAlignment="Left" Margin="61,214,0,0" VerticalAlignment="Top" Width="127" Click="btnExit_Click" Height="42"/>
+        <Label x:Name="lbl_password" Content="Password" HorizontalAlignment="Left" Margin="61,135,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_password" HorizontalAlignment="Left" Height="23" Margin="156,138,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="259"/>
+        <Button x:Name="btn_login" Content="Login" HorizontalAlignment="Left" Margin="288,214,0,0" VerticalAlignment="Top" Width="127" Click="btnExit_Click" Height="42"/>
+
+    </Grid>
+</Window>

@@ -5,19 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Manage Members" Height="500" Width="800">
     <Grid>
-        <Button x:Name="btn_addnew" Content="Add New" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btn_setpackage" Content="Set Package" HorizontalAlignment="Left" Margin="104,10,0,0" VerticalAlignment="Top" Width="75" Click="btn_setpackage_Click"/>
-        <Button x:Name="btn_memberdetails" Content="Member Details" HorizontalAlignment="Left" Margin="195,10,0,0" VerticalAlignment="Top" Width="97" />
-        <Button x:Name="btn_issue" Content="Issue / Return" HorizontalAlignment="Left" Margin="312,10,0,0" VerticalAlignment="Top" Width="96"/>
-        <Button x:Name="btn_explore" Content="Explore Members" HorizontalAlignment="Left" Margin="424,10,0,0" VerticalAlignment="Top" Width="104"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Height="204" Width="524"/>
-        <Label x:Name="lbl_search" Content="Search" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txt_search" HorizontalAlignment="Right" Height="26" Margin="0,50,308,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
-        <Label x:Name="lbl_field" Content="Field" HorizontalAlignment="Left" Margin="256,47,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cmb_field" HorizontalAlignment="Left" Margin="312,50,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_viewall" Content="View All" HorizontalAlignment="Left" Margin="453,50,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.506,0.335" Height="22"/>
+        <Button x:Name="btn_addnew" Content="Add New" HorizontalAlignment="Left" Margin="129,40,0,0" VerticalAlignment="Top" Width="93" Height="40"/>
+        <Button x:Name="btn_setpackage" Content="Set Package" HorizontalAlignment="Left" Margin="244,40,0,0" VerticalAlignment="Top" Width="92" Click="btn_setpackage_Click" Height="40"/>
+        <Button x:Name="btn_memberdetails" Content="Member Details" HorizontalAlignment="Left" Margin="356,40,0,0" VerticalAlignment="Top" Width="119" Height="40" />
+        <Button x:Name="btn_issue" Content="Issue / Return" HorizontalAlignment="Left" Margin="498,40,0,0" VerticalAlignment="Top" Width="118" Height="40"/>
+        <Button x:Name="btn_explore" Content="Explore Members" HorizontalAlignment="Left" Margin="636,40,0,0" VerticalAlignment="Top" Width="126" Height="40"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="126,146,0,0" VerticalAlignment="Top" Height="289" Width="636"/>
+        <Label x:Name="lbl_search" Content="Search" HorizontalAlignment="Left" Margin="126,102,0,0" VerticalAlignment="Top" Height="36" Width="55"/>
+        <TextBox x:Name="txt_search" HorizontalAlignment="Right" Height="31" Margin="0,102,403.6,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
+        <Label x:Name="lbl_field" Content="Field" HorizontalAlignment="Left" Margin="425,98,0,0" VerticalAlignment="Top" Height="36" Width="42"/>
+        <ComboBox x:Name="cmb_field" HorizontalAlignment="Left" Margin="493,102,0,0" VerticalAlignment="Top" Width="145" Height="32"/>
+        <Button x:Name="btn_viewall" Content="View All" HorizontalAlignment="Left" Margin="664,102,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.506,0.335" Height="31"/>
 
     </Grid>
 </Window>

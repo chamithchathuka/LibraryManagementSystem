@@ -7,7 +7,7 @@ using System.Data.Entity.Migrations;
 
 namespace Library_Management_System.controller
 {
-    class ReturnBookController
+    public class ReturnBookController
     {
         public Boolean addReturnBook(Return_Book returnbook)
         {

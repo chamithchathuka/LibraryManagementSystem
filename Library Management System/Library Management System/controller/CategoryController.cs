@@ -7,7 +7,7 @@ using System.Data.Entity.Migrations;
 
 namespace Library_Management_System.controller
 {
-    class CategoryController
+    public class CategoryController
     {
         public Boolean addCategory(Category category)
         {

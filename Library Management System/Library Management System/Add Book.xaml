@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
+        Closing="Window_Closing" Closed="Window_Closed"
+        WindowStartupLocation="CenterScreen"
         Title="Add Book" Height="500" Width="800">
     <Grid>
         <Button x:Name="btn_clear" Content="Clear" HorizontalAlignment="Left" Margin="437,406,0,0" VerticalAlignment="Top" Width="90" Height="40"/>

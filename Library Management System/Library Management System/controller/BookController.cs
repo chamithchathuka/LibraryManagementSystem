@@ -7,9 +7,9 @@ using System.Data.Entity.Migrations;
 
 namespace Library_Management_System.controller
 {
-    class BookController
+    public class BookController
     {
-        public Boolean addBook(Book_Detail book) {
+        public  Boolean addBook(Book_Detail book) {
             Boolean status = false;
              try
             {

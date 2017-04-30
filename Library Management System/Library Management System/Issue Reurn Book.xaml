@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Issue / Return Books" Height="500" Width="800">
     <Grid>
         <Label x:Name="lbl_bookid" Content="Member ID" HorizontalAlignment="Left" Margin="57,27,0,0" VerticalAlignment="Top"/>

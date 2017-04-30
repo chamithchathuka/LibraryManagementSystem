@@ -33,7 +33,7 @@
         <Button x:Name="btn_addbooktype" Content="+" HorizontalAlignment="Left" Margin="362,371,0,0" VerticalAlignment="Top" Width="26" Height="22" IsEnabled="False" />
         <Button x:Name="btn_addlanguage" Content="+&#xD;&#xA;`" HorizontalAlignment="Left" Margin="362,333,0,0" VerticalAlignment="Top" Width="26" Height="22" RenderTransformOrigin="3.565,0.201" IsEnabled="False" />
         <TextBox x:Name="txt_price" HorizontalAlignment="Left" Height="23" Margin="577,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
-        <Button x:Name="btn_next_book" Content="Next Book" HorizontalAlignment="Left" Margin="654,406,0,0" VerticalAlignment="Top" Width="90" Height="40" Click="btn_addbook_Click"/>
+        <Button x:Name="btn_next_book" Content="Next Book" HorizontalAlignment="Left" Margin="654,406,0,0" VerticalAlignment="Top" Width="90" Height="40" />
         <Label x:Name="lbl_numberofpages" Content="No of Pages" HorizontalAlignment="Left" Margin="79,413,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txt_no_of_pages" HorizontalAlignment="Left" Height="23" Margin="176,411,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165" IsEnabled="False" />
         <Label x:Name="lbl_yearx" Content="Edition" HorizontalAlignment="Left" Margin="447,282,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.352,0.719"/>

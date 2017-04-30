@@ -20,9 +20,17 @@ namespace Library_Management_System
     /// </summary>
     public partial class Add_Member : Window
     {
+
+        MemberController mbController = new MemberController();
+        private Member_Detail mb = null; 
         public Add_Member()
         {
             InitializeComponent();
+            mb = new Member_Detail();
+            mbController.addMember(mb);
+            txt_member_id.Text = mb.member_id.ToString();
+            
+
         }
 
         private void btn_addmember_Click(object sender, RoutedEventArgs e)
@@ -31,7 +39,7 @@ namespace Library_Management_System
             string lastName = txt_firstname.Text;
             DateTime dob = dpdob.SelectedDate.Value;
             string email = txt_email.Text;
-            string address = txt_address.Text;
+            string address = txt_block_address.Text;
             int phone = Int32.Parse(txt_phonenumber.Text);
             int addmission = Int32.Parse(txt_admissionnumber.Text);
 
@@ -46,8 +54,8 @@ namespace Library_Management_System
             if (firstName == null || firstName == "" || lastName == null || lastName == "" || address == null || address == "" || addmission == 0 )
                 MessageBox.Show("Please fill required fields");
             else {
-                MemberController membercontroller = new MemberController();
-                membercontroller.addMember(md);
+                
+                mbController.updateMember(md);
             }
                 
         }

@@ -7,7 +7,7 @@ using System.Data.Entity.Migrations;
 
 namespace Library_Management_System.controller
 {
-    class MemberController
+    public class MemberController
     {
         public Boolean addMember(Member_Detail member)
         {

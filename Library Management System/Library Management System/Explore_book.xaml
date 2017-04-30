@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
        Title="Explore Books" Height="450" Width="550">
     <Grid>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="264" Margin="0,21,0,0" VerticalAlignment="Top" Width="100"/>

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Add System User" Height="500" Width="800">
     <Grid>
         <Label x:Name="lbl_username" Content="User Name" HorizontalAlignment="Left" Margin="38,75,0,0" VerticalAlignment="Top" Height="27"/>

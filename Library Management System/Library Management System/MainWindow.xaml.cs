@@ -28,11 +28,13 @@ namespace Library_Management_System
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-            Home home = new Home();
-            home.ShowDialog();
-
-
+            this.Hide();
+            Console.Write("after window cloase ");
+            //Home home = new Home();
+            //home.ShowDialog();
+            Add_Book ab = new Add_Book();
+            ab.ShowDialog();
+            
         }
 
         private void btnExit_Click(object sender, RoutedEventArgs e)

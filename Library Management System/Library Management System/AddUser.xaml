@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
-        Title="Add System User" Height="450" Width="550">
+        Title="Add System User" Height="500" Width="800">
     <Grid>
         <Label x:Name="lbl_username" Content="User Name" HorizontalAlignment="Left" Margin="38,75,0,0" VerticalAlignment="Top" Height="27"/>
         <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="27" Margin="125,74,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.423,0.752"/>

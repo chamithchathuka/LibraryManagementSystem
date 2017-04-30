@@ -5,36 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
-        Title="View Books" Height="450" Width="550">
+        Title="View Books" Height="500" Width="800">
     <Grid>
-        <Grid>
-            <Label x:Name="lbl_book_id" Content="Book ID" HorizontalAlignment="Left" Margin="290,64,0,0" VerticalAlignment="Top" />
-            <Label x:Name="lbl_isbn" Content="ISBN" HorizontalAlignment="Left" Margin="50,100,0,0" VerticalAlignment="Top" Height="26"/>
-            <Label x:Name="lbl_title" Content="Title" Margin="50,137,462,0" VerticalAlignment="Top" RenderTransformOrigin="-0.815,0.173"/>
-            <Label x:Name="lbl_author" Content="Author" Margin="50,180,435,0" VerticalAlignment="Top" RenderTransformOrigin="1.117,0.43"/>
-            <Label x:Name="lbl_description" Content="Description" HorizontalAlignment="Left" Margin="50,215,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lbl_category" Content="Category" HorizontalAlignment="Left" Margin="290,180,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lbl_publisher" Content="Publisher" HorizontalAlignment="Left" Margin="50,286,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lbl_language" Content="Language" HorizontalAlignment="Left" Margin="50,329,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lbl_price" Content="Price" HorizontalAlignment="Left" Margin="290,283,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lbl_booktype" Content="Book Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,372,0,0"/>
-            <Label x:Name="lbl_booknumber" Content="Book Number" HorizontalAlignment="Left" Margin="290,99,0,0" VerticalAlignment="Top" Height="33"/>
-            <TextBox x:Name="txt_bookid" HorizontalAlignment="Left" Height="23" Margin="396,64,0,0" TextWrapping="Wrap" Text="book id" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-            <TextBox x:Name="txt_isbn" HorizontalAlignment="Left" Height="23" Margin="147,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-            <TextBlock x:Name="txt_title" HorizontalAlignment="Left" Margin="147,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="369" Foreground="#FF1D1717"><Run /></TextBlock>
-            <TextBox x:Name="txt_author" HorizontalAlignment="Left" Height="23" Margin="147,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-            <TextBlock x:Name="txt_description" HorizontalAlignment="Left"  Margin="147,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="369" ToolTip="description" IsEnabled="False"/>
-            <TextBox x:Name="txt_publisher" HorizontalAlignment="Left" Height="23" Margin="147,286,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-            <ComboBox x:Name="cmb_category" HorizontalAlignment="Left" Margin="396,180,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-            <ComboBox x:Name="cmb_booktype" HorizontalAlignment="Left" Margin="147,372,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-            <TextBox x:Name="txt_booknumber" HorizontalAlignment="Left" Height="23" Margin="396,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-            <Button x:Name="btn_edit" Content="Edit" HorizontalAlignment="Left" Margin="441,13,0,0" VerticalAlignment="Top" Width="75"/>
-            <TextBox x:Name="txt_price" HorizontalAlignment="Left" Height="23" Margin="396,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-            <ComboBox x:Name="cmb_language" HorizontalAlignment="Left" Margin="147,329,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-            <Button x:Name="btn_addbooktype" Content="Add Book Type" HorizontalAlignment="Left" Margin="290,372,0,0" VerticalAlignment="Top" Width="85" Height="22" IsEnabled="False"/>
-            <Button x:Name="btn_addlanguage" Content="Add Language" HorizontalAlignment="Left" Margin="290,329,0,0" VerticalAlignment="Top" Width="85" Height="22" IsEnabled="False"/>
-            <Image x:Name="image" HorizontalAlignment="Left" Height="74" Margin="50,13,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btn_clear" Content="Clear" HorizontalAlignment="Left" Margin="437,406,0,0" VerticalAlignment="Top" Width="90" Height="40"/>
+        <Label x:Name="lbl_book_id" Content="Book ID" HorizontalAlignment="Left" Margin="450,27,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_isbn" Content="ISBN" HorizontalAlignment="Left" Margin="450,64,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="lbl_title" Content="Title" Margin="82,159,636.6,0" VerticalAlignment="Top" RenderTransformOrigin="-0.815,0.173"/>
+        <Label x:Name="lbl_author" Content="Author" Margin="447,162,273.6,0" VerticalAlignment="Top" RenderTransformOrigin="1.117,0.43"/>
+        <Label x:Name="lbl_description" Content="Description" HorizontalAlignment="Left" Margin="79,222,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_category" Content="Category" HorizontalAlignment="Left" Margin="444,221,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_publisher" Content="Publisher" HorizontalAlignment="Left" Margin="79,282,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_language" Content="Language" HorizontalAlignment="Left" Margin="79,321,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_price" Content="Price" HorizontalAlignment="Left" Margin="444,321,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_booktype" Content="Book Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,371,0,0" RenderTransformOrigin="0.542,2.077"/>
+        <Label x:Name="lbl_booknumber" Content="Book Number" HorizontalAlignment="Left" Margin="447,109,0,0" VerticalAlignment="Top" Height="33"/>
+        <TextBox x:Name="txt_bookid" HorizontalAlignment="Left" Height="23" Margin="577,27,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165" IsEnabled="false"/>
+        <TextBox x:Name="txt_isbn" HorizontalAlignment="Left" Height="23" Margin="576,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" IsEnabled="False" />
+        <TextBox x:Name="txt_title" HorizontalAlignment="Left" Margin="176,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="212" Foreground="#FF1D1717" IsEnabled="False" />
+        <TextBox x:Name="txt_author" HorizontalAlignment="Left" Height="23" Margin="576,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <TextBlock x:Name="txt_description" HorizontalAlignment="Left"  Margin="176,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="212" ToolTip="description" IsEnabled="False" />
+        <TextBox x:Name="txt_publisher" HorizontalAlignment="Left" Height="23" Margin="176,284,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="212" IsEnabled="False" />
+        <TextBlock x:Name="txtlanguage" HorizontalAlignment="Left" Margin="176,324,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="21" Width="165"/>
+        <ComboBox x:Name="cmb_category" HorizontalAlignment="Left" Margin="576,221,0,0" VerticalAlignment="Top" Width="165"/>
+        <ComboBox x:Name="cmb_booktype" HorizontalAlignment="Left" Margin="176,371,0,0" VerticalAlignment="Top" Width="165" IsEnabled="False" />
+        <TextBox x:Name="txt_booknumber" HorizontalAlignment="Left" Height="23" Margin="577,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <Button x:Name="btn_edit" Content="Edit" HorizontalAlignment="Left" Margin="548,406,0,0" VerticalAlignment="Top" Width="90" Height="40"/>
+        <Button x:Name="btn_addbooktype" Content="+" HorizontalAlignment="Left" Margin="362,371,0,0" VerticalAlignment="Top" Width="26" Height="22" IsEnabled="False" />
+        <Button x:Name="btn_addlanguage" Content="+&#xD;&#xA;`" HorizontalAlignment="Left" Margin="362,333,0,0" VerticalAlignment="Top" Width="26" Height="22" RenderTransformOrigin="3.565,0.201" IsEnabled="False" />
+        <TextBox x:Name="txt_price" HorizontalAlignment="Left" Height="23" Margin="577,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <Button x:Name="btn_next_book" Content="Next Book" HorizontalAlignment="Left" Margin="654,406,0,0" VerticalAlignment="Top" Width="90" Height="40" Click="btn_addbook_Click"/>
+        <Label x:Name="lbl_numberofpages" Content="No of Pages" HorizontalAlignment="Left" Margin="79,413,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_no_of_pages" HorizontalAlignment="Left" Height="23" Margin="176,411,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165" IsEnabled="False" />
+        <Label x:Name="lbl_yearx" Content="Edition" HorizontalAlignment="Left" Margin="447,282,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.352,0.719"/>
+        <TextBox x:Name="txt_year" HorizontalAlignment="Left" Height="23" Margin="577,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <Label x:Name="lbl_no_of_copies" Content="No of Copies" HorizontalAlignment="Left" Margin="444,363,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.352,0.719"/>
+        <TextBox x:Name="txt_no_of_copies" HorizontalAlignment="Left" Height="23" Margin="577,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="105" Margin="176,27,0,0" VerticalAlignment="Top" Width="105"/>
 
-        </Grid>
     </Grid>
+
 </Window>

@@ -5,34 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
-        Title="Add Member" Height="325" Width="550">
-    <Grid Background="#FFF0ECEC">
+        Title="Add Member" Height="500" Width="800">
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="109*"/>
             <ColumnDefinition Width="163*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="label" Content="First Name" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="100" Height="29"/>
-        <TextBox x:Name="txt_firstname" HorizontalAlignment="Left" Height="26" Margin="110,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Grid.ColumnSpan="2"/>
-        <Label x:Name="label_Copy" Content="Last Name" HorizontalAlignment="Left" Margin="45,24,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="100" Height="29" Grid.Column="1"/>
-        <TextBox x:Name="txt_lastname" HorizontalAlignment="Left" Height="26" Margin="170,24,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Grid.Column="1"/>
-        <Label x:Name="lbl_dob" Content="Date of Birth" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="100" Height="29"/>
-        <DatePicker x:Name ="dpdob" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="110,70,0,0" Width="131" Height="29" Grid.ColumnSpan="2"/>
-        <Label x:Name="lbl_address" Content="Address" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="100" Height="29"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="115,135,0,0" Height="52" Width="131" Grid.ColumnSpan="2"/>
-        <Label x:Name="lbl_email" Content="Email" HorizontalAlignment="Left" Margin="10,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="78" Height="29"/>
-        <TextBox x:Name="txt_email" HorizontalAlignment="Left" Height="26" Margin="110,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Grid.ColumnSpan="2"/>
-        <Label x:Name="lbl_phonenumber" Content="Phone Number" HorizontalAlignment="Left" Margin="45,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="100" Height="29" Grid.Column="1"/>
-        <TextBox x:Name="txt_address" HorizontalAlignment="Left" Height="43" Margin="110,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="414" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txt_phonenumber" HorizontalAlignment="Left" Height="26" Margin="170,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Grid.Column="1"/>
-        <Label x:Name="lbl_addmissionnumber" Content="Addmission Number" HorizontalAlignment="Left" Margin="45,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="120" Height="29" Grid.Column="1"/>
-        <TextBox x:Name="txt_admissionnumber" HorizontalAlignment="Left" Height="26" Margin="170,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Grid.Column="1"/>
-        <Button x:Name="btn_chooseimage" Content="Upload Photo" HorizontalAlignment="Left" Margin="110,218,0,0" VerticalAlignment="Top" Width="136" Height="22" Grid.ColumnSpan="2"/>
-        <Button x:Name="btn_addmember" Content="Add Member" HorizontalAlignment="Left" Margin="186,243,0,0" VerticalAlignment="Top" Width="120" Height="42" Grid.Column="1" Click="btn_addmember_Click" >
+        <Label x:Name="label" Content="First Name" HorizontalAlignment="Left" Margin="85,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="100" Height="29"/>
+        <TextBox x:Name="txt_firstname" HorizontalAlignment="Left" Height="26" Margin="222,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Grid.ColumnSpan="2"/>
+        <Label x:Name="label_Copy" Content="Last Name" HorizontalAlignment="Left" Margin="129.6,24,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="100" Height="29" Grid.Column="1"/>
+        <TextBox x:Name="txt_lastname" HorizontalAlignment="Left" Height="26" Margin="294.6,24,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Grid.Column="1"/>
+        <Label x:Name="lbl_dob" Content="Date of Birth" HorizontalAlignment="Left" Margin="85,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="100" Height="29"/>
+        <DatePicker x:Name ="dpdob" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="222,73,0,0" Width="203" Height="29" Grid.ColumnSpan="2"/>
+        <Label x:Name="lbl_address" Content="Address" HorizontalAlignment="Left" Margin="85,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="100" Height="29"/>
+        <TextBlock x:Name="txt_block_address" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="222,121,0,0" Height="50" Width="527" Grid.ColumnSpan="2"/>
+        <Label x:Name="lbl_email" Content="Email" HorizontalAlignment="Left" Margin="85,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="78" Height="29"/>
+        <TextBox x:Name="txt_email" HorizontalAlignment="Left" Height="26" Margin="222,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Grid.ColumnSpan="2"/>
+        <Label x:Name="lbl_phonenumber" Content="Phone Number" HorizontalAlignment="Left" Margin="129.6,190,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="100" Height="29" Grid.Column="1"/>
+        <TextBox x:Name="txt_phonenumber" HorizontalAlignment="Left" Height="26" Margin="294.6,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Grid.Column="1"/>
+        <Label x:Name="lbl_addmissionnumber" Content="Addmission Number" HorizontalAlignment="Left" Margin="129.6,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="120" Height="29" Grid.Column="1"/>
+        <TextBox x:Name="txt_admissionnumber" HorizontalAlignment="Left" Height="26" Margin="294.6,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Grid.Column="1"/>
+        <Button x:Name="btn_chooseimage" Content="Upload Photo" HorizontalAlignment="Left" Margin="153,284,0,0" VerticalAlignment="Top" Width="136" Height="42"/>
+        <Button x:Name="btn_addmember" Content="Add Member" HorizontalAlignment="Left" Margin="294.6,284,0,0" VerticalAlignment="Top" Width="136" Height="42" Grid.Column="1" Click="btn_addmember_Click" >
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Label x:Name="lbl_chooseimage"  Content="Add Member" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="88" Height="29"/>
 
     </Grid>
 </Window>

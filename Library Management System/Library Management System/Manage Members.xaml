@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
-        Title="Manage Members" Height="325" Width="550">
+        Title="Manage Members" Height="500" Width="800">
     <Grid>
         <Button x:Name="btn_addnew" Content="Add New" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="btn_setpackage" Content="Set Package" HorizontalAlignment="Left" Margin="104,10,0,0" VerticalAlignment="Top" Width="75" Click="btn_setpackage_Click"/>

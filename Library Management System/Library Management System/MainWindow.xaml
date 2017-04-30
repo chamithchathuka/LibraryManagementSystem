@@ -10,10 +10,10 @@
     <Grid>
         <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="26" Margin="156,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" ToolTip="User Name"/>
         <Label x:Name="lbl_username" Content="User Name" HorizontalAlignment="Left" Margin="61,81,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btn_exit" Content="Exit" HorizontalAlignment="Left" Margin="61,214,0,0" VerticalAlignment="Top" Width="127" Click="btnExit_Click" Height="42"/>
         <Label x:Name="lbl_password" Content="Password" HorizontalAlignment="Left" Margin="61,135,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txt_password" HorizontalAlignment="Left" Height="23" Margin="156,138,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="259"/>
-        <Button x:Name="btn_login" Content="Login" HorizontalAlignment="Left"  Margin="288,214,0,0" VerticalAlignment="Top" Width="127" Click="btnLogin_Click" Height="42"/>
+        <Button x:Name="btn_exit" Content="Exit" HorizontalAlignment="Left" Margin="61,223,0,0" VerticalAlignment="Top" Width="140" Height="45"/>
+        <Button x:Name="btn_login" Content="Login" HorizontalAlignment="Left" Margin="275,223,0,0" VerticalAlignment="Top" Width="140" Height="45" Click="btn_login_Click"/>
 
     </Grid>
 </Window>

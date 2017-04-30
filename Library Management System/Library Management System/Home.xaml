@@ -8,16 +8,17 @@
         WindowStartupLocation="CenterScreen"
         Title="Home" Height="500" Width="800">
     <Grid Margin="-2,0,2,0">
-        <Button x:Name="btn_explorer" Content="Explore Books" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="40" Margin="10,15,0,0"/>
-        <Button x:Name="btn_issue_return" Content="Book Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="10,56,0,0"/>
-        <Button x:Name="btn_details" Content="Issue / Return Book" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="40" Margin="10,96,0,0"/>
-        <Button x:Name="btn_issue" Content="Issue Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="10,136,0,0"/>
-        <Button x:Name="btn_return" Content="Manage Books" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="10,176,0,0" />
-        <Button x:Name="btn_issue_details" Content="Manage Members" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="10,216,0,0"/>
-        <Button x:Name="button_Copy5" Content="Issue Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="10,256,0,0"/>
-        <Button x:Name="button_Copy6" Content="Book Categories" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="10,296,0,0"/>
-        <Button x:Name="button_Copy7" Content="Book languages" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="10,336,0,0"/>
-        <Button x:Name="button_Copy8" Content="Help" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="10,376,0,0"/>
+        <Button x:Name="btn_explorer" Content="Explore Books" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,39,0,0" Click="btn_explorer_Click"/>
+        <Button x:Name="btn_issue_return" Content="Book Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,80,0,0"/>
+        <Button x:Name="btn_details" Content="Issue / Return Book" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,120,0,0"/>
+        <Button x:Name="btn_issue" Content="Issue Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,160,0,0"/>
+        <Button x:Name="btn_managebooks" Content="Manage Books" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,240,0,0" Click="btn_return_Click" />
+        <Button x:Name="btn_manage_members" Content="Manage Members" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,280,0,0"/>
+        <Button x:Name="btn_return_detail" Content="Return Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,200,0,0"/>
+        <Button x:Name="btn_book_categories" Content="Book Categories" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,320,0,0"/>
+        <Button x:Name="btn_book_language" Content="Book languages" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,360,0,0"/>
+        <Button x:Name="btn_help" Content="Help" HorizontalAlignment="Left" Width="155" Margin="24,400,0,0" Height="40" VerticalAlignment="Top"/>
+        <Button x:Name="btn_settigs" Content="Settings" HorizontalAlignment="Left" Margin="676,39,0,0" VerticalAlignment="Top" Width="89" Height="40" Click="btn_settigs_Click"/>
 
     </Grid>
 </Window>

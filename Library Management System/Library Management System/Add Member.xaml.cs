@@ -54,7 +54,6 @@ namespace Library_Management_System
             if (firstName == null || firstName == "" || lastName == null || lastName == "" || address == null || address == "" || addmission == 0 )
                 MessageBox.Show("Please fill required fields");
             else {
-                
                 mbController.updateMember(md);
             }
                 

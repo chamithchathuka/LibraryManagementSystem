@@ -94,6 +94,9 @@
     <Compile Include="entity\Return_Book.cs" />
     <Compile Include="entity\Type.cs" />
     <Compile Include="entity\User_Detail.cs" />
+    <Compile Include="Manage_System_User.xaml.cs">
+      <DependentUpon>Manage_System_User.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Util\EncryptionUtil.cs" />
     <Compile Include="View Book Details.xaml.cs">
       <DependentUpon>View Book Details.xaml</DependentUpon>
@@ -144,6 +147,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Manage Members.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manage_System_User.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

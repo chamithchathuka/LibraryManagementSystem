@@ -9,6 +9,26 @@ namespace Library_Management_System.controller
 {
     public class BookController
     {
+        public System.Windows.Controls.DataGrid loadBooks(System.Windows.Controls.DataGrid dataGrid) 
+        {
+           try
+            {
+                using (var db = new ModelDB())
+                {
+
+                    var query = from bk in db.Book_Detail select new { bk.book_id,bk.isbn,bk.no_of_copies,bk.author,bk.year,bk.publisher,bk.language,bk.description};
+                    var results = query.ToList();
+                    dataGrid.ItemsSource = results;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException);
+            }
+
+            return dataGrid;
+        }
+
         public  Boolean addBook(Book_Detail book) {
             Boolean status = false;
              try

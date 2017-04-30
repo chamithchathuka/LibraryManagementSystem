@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library_Management_System.controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,19 @@ namespace Library_Management_System
     /// </summary>
     public partial class Explore_book : Window
     {
+        BookController bContoller = new BookController();
         public Explore_book()
         {
+
             InitializeComponent();
+            bContoller.loadBooks(book_grid);
+            
+        }
+
+       
+        private void btn_search_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

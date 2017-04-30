@@ -25,6 +25,7 @@ namespace Library_Management_System
         public AddUser()
         {
             InitializeComponent();
+        
         }
        
         private void btn_add_Click(object sender, RoutedEventArgs e)

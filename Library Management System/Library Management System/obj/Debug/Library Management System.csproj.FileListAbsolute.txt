@@ -64,3 +64,5 @@ C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\L
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\MainWindow.baml
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Manage Members.baml
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\View Book Details.baml
+C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Manage_System_User.g.cs
+C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Manage_System_User.baml

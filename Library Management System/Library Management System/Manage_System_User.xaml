@@ -1,0 +1,34 @@
+﻿<Window x:Class="Library_Management_System.Manage_System_User"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_Management_System"
+        mc:Ignorable="d"
+        
+        
+        WindowStartupLocation="CenterScreen"
+        Title="Manage System Users" Height="500" Width="800">
+    <Grid>
+        <Label x:Name="lbl_username" Content="User Name" HorizontalAlignment="Left" Margin="82,42,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="26" Margin="219,42,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="212"  />
+        <Label x:Name="lbl_password" Content="Password" HorizontalAlignment="Left" Margin="82,92,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_password_confrim" Content="Confirm Password" HorizontalAlignment="Left" Margin="82,141,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_name" Content="Name" HorizontalAlignment="Left" Margin="82,191,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_name" HorizontalAlignment="Left" Height="26" Margin="219,191,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="212"  />
+        <Label x:Name="lbl_address" Content="Address" HorizontalAlignment="Left" Margin="82,240,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_address" HorizontalAlignment="Left" Height="45" Margin="219,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212"/>
+        <Label x:Name="lbl_phone" Content="Phone" HorizontalAlignment="Left" Margin="462,43,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_phone" HorizontalAlignment="Left" Height="26" Margin="523,43,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="212"   />
+        <Label x:Name="lbl_email" Content="Email" HorizontalAlignment="Left" Margin="462,93,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_email" HorizontalAlignment="Left" Height="26" Margin="523,92,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="212" />
+        <Label x:Name="lbl_category" Content="Type" HorizontalAlignment="Left" Margin="462,143,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="523,143,0,0" VerticalAlignment="Top" Width="212"/>
+        <Button x:Name="btn_clear" Content="Clear" HorizontalAlignment="Left" Margin="437,406,0,0" VerticalAlignment="Top" Width="90" Height="40"/>
+
+        <Button x:Name="btn_add_user" Content="Add System User" HorizontalAlignment="Left" Margin="614,406,0,0" VerticalAlignment="Top" Width="130" Height="40" Click="btn_add_user_Click" />
+        <PasswordBox x:Name="txt_password" HorizontalAlignment="Left" Margin="219,93,0,0" VerticalAlignment="Top" Height="26" Width="212"/>
+        <PasswordBox x:Name="txt_password_confirm" HorizontalAlignment="Left" Margin="219,143,0,0" VerticalAlignment="Top" Width="212" Height="26"/>
+
+    </Grid>
+</Window>

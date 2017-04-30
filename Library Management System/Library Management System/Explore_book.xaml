@@ -6,17 +6,18 @@
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-       Title="Explore Books" Height="450" Width="550">
+       Title="Explore Books" Height="500" Width="800">
     <Grid>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="264" Margin="0,21,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label x:Name="lbl_categories" Content="Categories" HorizontalAlignment="Left" Margin="0,-5,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label x:Name="lbl_search" Content="Search" HorizontalAlignment="Left" Margin="105,21,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txt_search" HorizontalAlignment="Left" Height="23" Margin="166,21,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="192"/>
-        <Label x:Name="lbl_field" Content="Field" HorizontalAlignment="Left" Margin="105,56,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cmb_field" HorizontalAlignment="Left" Margin="166,56,0,0" VerticalAlignment="Top" Width="192"/>
-        <Button x:Name="btn_search" Content="Search" HorizontalAlignment="Left" Margin="379,21,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.506,0.335" Height="57"/>
-        <Button x:Name="btn_issue" Content="Issue" HorizontalAlignment="Left" Margin="461,21,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.506,0.335" Height="26"/>
-        <Button x:Name="btn_return" Content="Return" HorizontalAlignment="Left" Margin="461,52,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.506,0.335" Height="26"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="264" Margin="75,113,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="lbl_categories" Content="Categories" HorizontalAlignment="Left" Margin="101,41,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="lbl_search" Content="Search" HorizontalAlignment="Left" Margin="296,24,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_search" HorizontalAlignment="Left" Height="23" Margin="357,24,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="192"/>
+        <Label x:Name="lbl_field" Content="Field" HorizontalAlignment="Left" Margin="296,59,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cmb_field" HorizontalAlignment="Left" Margin="357,59,0,0" VerticalAlignment="Top" Width="192"/>
+        <Button x:Name="btn_search" Content="Search" HorizontalAlignment="Left" Margin="570,24,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.506,0.335" Height="57" Click="btn_search_Click"/>
+        <Button x:Name="btn_issue" Content="Issue" HorizontalAlignment="Left" Margin="652,24,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.506,0.335" Height="26"/>
+        <Button x:Name="btn_return" Content="Return" HorizontalAlignment="Left" Margin="652,55,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.506,0.335" Height="26"/>
+        <DataGrid x:Name="book_grid" HorizontalAlignment="Left" Margin="255,137,0,0" VerticalAlignment="Top" Height="266" Width="497" ItemsSource="{Binding Data Source\=CC\\SQLEXPRESS;Initial Catalog\=LibraryDB;Integrated Security\=True}"/>
 
     </Grid>
 </Window>

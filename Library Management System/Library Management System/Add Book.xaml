@@ -11,6 +11,7 @@
     <Grid>
         <Button x:Name="btn_clear" Content="Clear" HorizontalAlignment="Left" Margin="437,406,0,0" VerticalAlignment="Top" Width="90" Height="40"/>
         <Label x:Name="lbl_book_id" Content="Book ID" HorizontalAlignment="Left" Margin="82,42,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_bookid" HorizontalAlignment="Left" Height="23" Margin="176,42,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="212" IsEnabled="false"/>
         <Label x:Name="lbl_isbn" Content="ISBN" HorizontalAlignment="Left" Margin="82,103,0,0" VerticalAlignment="Top" Height="26"/>
         <Label x:Name="lbl_title" Content="Title" Margin="82,159,636.6,0" VerticalAlignment="Top" RenderTransformOrigin="-0.815,0.173"/>
         <Label x:Name="lbl_author" Content="Author" Margin="447,162,273.6,0" VerticalAlignment="Top" RenderTransformOrigin="1.117,0.43"/>
@@ -22,7 +23,7 @@
         <Label x:Name="lbl_coverimage" Content="Cover Image" HorizontalAlignment="Left" Margin="443,44,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_booktype" Content="Book Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,371,0,0" RenderTransformOrigin="0.542,2.077"/>
         <Label x:Name="lbl_booknumber" Content="Book Number" HorizontalAlignment="Left" Margin="444,106,0,0" VerticalAlignment="Top" Height="33"/>
-        <TextBox x:Name="txt_bookid" HorizontalAlignment="Left" Height="23" Margin="176,42,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="212" IsEnabled="false"/>
+      
         <TextBox x:Name="txt_isbn" HorizontalAlignment="Left" Height="23" Margin="176,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212"/>
         <TextBox x:Name="txt_title" HorizontalAlignment="Left" Margin="176,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="212" Foreground="#FF1D1717"></TextBox>
         <TextBox x:Name="txt_author" HorizontalAlignment="Left" Height="23" Margin="576,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>

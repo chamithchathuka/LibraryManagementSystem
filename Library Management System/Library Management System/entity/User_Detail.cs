@@ -9,10 +9,10 @@ namespace Library_Management_System
     public partial class User_Detail
     {
         [Key]
-        [StringLength(50)]
+        [StringLength(1000)]
         public string user_name { get; set; }
 
-        [StringLength(50)]
+        [StringLength(5000)]
         public string password { get; set; }
 
         [StringLength(50)]

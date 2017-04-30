@@ -47,5 +47,10 @@ namespace Library_Management_System
             Explore_book ex = new Explore_book();
             ex.Show();
         }
+
+        private void btn_issue_return_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

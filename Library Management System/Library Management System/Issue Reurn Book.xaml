@@ -8,14 +8,34 @@
         WindowStartupLocation="CenterScreen"
         Title="Issue / Return Books" Height="500" Width="800">
     <Grid>
-        <Label x:Name="lbl_bookid" Content="Member ID" HorizontalAlignment="Left" Margin="57,27,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_memberid" Content="Book ID" HorizontalAlignment="Left" Margin="57,60,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txt_memberid" HorizontalAlignment="Left" Height="23" Margin="135,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txt_bookid" HorizontalAlignment="Left" Height="23" Margin="135,63,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_issue" Content="Issue" HorizontalAlignment="Left" Margin="413,32,0,0" VerticalAlignment="Top" Width="109" Height="24"/>
-        <Button x:Name="btn_return" Content="Return" HorizontalAlignment="Left" Margin="413,63,0,0" VerticalAlignment="Top" Width="109" Height="23"/>
-        <Button x:Name="btn_check" Content="Search" HorizontalAlignment="Left" Margin="286,33,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
-        <Button x:Name="btn_check_Copy" Content="Search" HorizontalAlignment="Left" Margin="286,63,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
+        <Label x:Name="lbl_bookid" Content="Member ID" HorizontalAlignment="Left" Margin="135,38,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_memberid" Content="Book ID" HorizontalAlignment="Left" Margin="135,65,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_memberid" HorizontalAlignment="Left" Height="23" Margin="282,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <TextBox x:Name="txt_bookid" HorizontalAlignment="Left" Height="23" Margin="282,68,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="159"/>
+        <Button x:Name="btn_issue" Content="Issue" HorizontalAlignment="Left" Margin="626,37,0,0" VerticalAlignment="Top" Width="109" Height="24"/>
+        <Button x:Name="btn_return" Content="Return" HorizontalAlignment="Left" Margin="626,68,0,0" VerticalAlignment="Top" Width="109" Height="23"/>
+        <Button x:Name="btn_check" Content="Search" HorizontalAlignment="Left" Margin="473,37,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn_check_Click"/>
+        <Button x:Name="btn_check_Copy" Content="Search" HorizontalAlignment="Left" Margin="473,67,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="113" Margin="135,179,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_member_heading" Content="Member Details" HorizontalContentAlignment="Center" Margin="135,115,538.6,0" VerticalAlignment="Top"/>
+        <Image x:Name="book_detail" HorizontalAlignment="Left" Height="136" Margin="471,151,0,0" VerticalAlignment="Top" Width="158"/>
+        <Label x:Name="lbl_book_detail" Content="Book Detail" HorizontalContentAlignment="Center" Margin="471,115,164.6,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_member_id" Content="Student_ID" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="135,314,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_student_name" Content="Student_Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="135,356,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_phone_number" Content="Phone_Number" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="135,402,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_book_name" Content="Book_Name" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="355,356,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lbl_book_id" Content="Book_ID" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="355,314,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lbl_book_name_Copy" Content="Publisher" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="354,401,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lbl_book_name_replace" Content="Book_Name" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="461,356,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lbl_book_id_replace" Content="Book_ID" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="461,314,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lbl_book_publisher_replace" Content="Publisher" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="460,401,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lbl_edition" Content="Edition" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="564,314,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lbl_isbn_replace" Content="ISBN" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="670,314,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lbl_isbn_Copy" Content="Availability" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="564,356,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lbl_availablility" Content="Availability" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="670,356,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lbl_category" Content="Category" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="564,401,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lbl_cat_replace" Content="Caegory Replace" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="670,401,0,0" VerticalAlignment="Top" Width="87"/>
+
 
     </Grid>
 </Window>

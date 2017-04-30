@@ -169,6 +169,12 @@ namespace Library_Management_System {
             return;
             case 2:
             this.btn_issue_return = ((System.Windows.Controls.Button)(target));
+            
+            #line 12 "..\..\Home.xaml"
+            this.btn_issue_return.Click += new System.Windows.RoutedEventHandler(this.btn_issue_return_Click);
+            
+            #line default
+            #line hidden
             return;
             case 3:
             this.btn_details = ((System.Windows.Controls.Button)(target));

@@ -98,6 +98,7 @@
       <DependentUpon>Manage_System_User.xaml</DependentUpon>
     </Compile>
     <Compile Include="Util\EncryptionUtil.cs" />
+    <Compile Include="Util\StandardID Generator.cs" />
     <Compile Include="View Book Details.xaml.cs">
       <DependentUpon>View Book Details.xaml</DependentUpon>
     </Compile>

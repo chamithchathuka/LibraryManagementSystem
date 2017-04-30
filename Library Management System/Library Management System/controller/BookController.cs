@@ -89,7 +89,25 @@ namespace Library_Management_System.controller
             return bookDetail;
         }
 
-        
+        public Book_Detail findByBookID(int bookID)
+        {
+            Book_Detail bookDetail = null;
+            try
+            {
+                using (var db = new ModelDB())
+                {
+
+                    bookDetail = db.Book_Detail.Find(bookID);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException);
+            }
+            return bookDetail;
+        }
+
 
         public Book_Detail findByISBN(string isbn)
         {

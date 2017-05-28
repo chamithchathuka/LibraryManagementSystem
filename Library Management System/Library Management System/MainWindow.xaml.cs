@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.Entity.Migrations;
+using Library_Management_System.controller;
 
 namespace Library_Management_System
 {
@@ -26,20 +27,45 @@ namespace Library_Management_System
             InitializeComponent();
         }
 
-       
-
-        private void btnExit_Click(object sender, RoutedEventArgs e)
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-     
-            Application.Current.Shutdown();
+            if (e.Key == Key.Enter)
+            {
+                btn_login_Click(sender, e);
+            }
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            Console.Write("after window cloase ");
-            Home home = new Home();
-            home.ShowDialog();
+           
+
+            string username = txt_username.Text;
+            string password = txt_password.Password;
+
+            UserDetailController userContoller = new UserDetailController();
+            // Boolean result =  userContoller.checkUserLogin(username, password);
+            Boolean result = true;
+            if (result)
+            {
+                this.Hide();
+                Home home = new Home();
+                home.ShowDialog();
+            }
+            else {
+              
+                MessageBox.Show("Please check user name and password!", "Library MS", MessageBoxButton.OK, MessageBoxImage.Error);
+                txt_password.Password = "";
+                txt_username.Text = "";
+            }
+
+
+            Console.Write("after window close ");
+           
+        }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

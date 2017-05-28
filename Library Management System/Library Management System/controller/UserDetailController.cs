@@ -47,17 +47,20 @@ namespace Library_Management_System.controller
         }
 
         public Boolean checkUserLogin(string username,string password) {
+            Console.Write("username " + username + " password " + password);
 
             string encrypted = EncryptionUtil.ToSHA256(password);
+            Console.Write("encrypted " + encrypted);
+
             User_Detail userdetail = null;
             Boolean user_status = false;
             try
             {
                 using (var db = new ModelDB())
                 {
-                    userdetail = db.User_Detail
-                        .FirstOrDefault(u => u.email == username
-                        && u.password == encrypted);
+                    Console.Write("user detail"+db.User_Detail.FirstOrDefault());
+                    userdetail = db.User_Detail.Where(u => u.user_name == username && u.password == encrypted ).FirstOrDefault();
+                    Console.Write("user detail " + userdetail);
                     if (userdetail != null) {
                         user_status = true;
                    }

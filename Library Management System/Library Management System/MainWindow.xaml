@@ -6,14 +6,16 @@
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        PreviewKeyDown="Window_PreviewKeyDown"
         Title="MainWindow" Height="343.204" Width="468.932">
     <Grid>
-        <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="26" Margin="156,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" ToolTip="User Name"/>
+        <TextBox x:Name="txt_username" TabIndex="1" HorizontalAlignment="Left" Height="23" Margin="156,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" ToolTip="User Name"/>
         <Label x:Name="lbl_username" Content="User Name" HorizontalAlignment="Left" Margin="61,81,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_password" Content="Password" HorizontalAlignment="Left" Margin="61,135,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txt_password" HorizontalAlignment="Left" Height="23" Margin="156,138,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="259"/>
-        <Button x:Name="btn_exit" Content="Exit" HorizontalAlignment="Left" Margin="61,223,0,0" VerticalAlignment="Top" Width="140" Height="45"/>
-        <Button x:Name="btn_login" Content="Login" HorizontalAlignment="Left" Margin="275,223,0,0" VerticalAlignment="Top" Width="140" Height="45" Click="btn_login_Click"/>
+
+        <Button x:Name="btn_exit" TabIndex="4"  Content="Exit" HorizontalAlignment="Left" Margin="61,223,0,0" VerticalAlignment="Top" Width="140" Height="45" Click="btn_exit_Click"/>
+        <Button x:Name="btn_login" Content="Login"  TabIndex="3" HorizontalAlignment="Left" Margin="275,223,0,0" VerticalAlignment="Top" Width="140" Height="45" Click="btn_login_Click"/>
+        <PasswordBox x:Name="txt_password" TabIndex="2"  HorizontalAlignment="Left" Margin="156,138,0,0" VerticalAlignment="Top" Width="259" Height="23"/>
 
     </Grid>
 </Window>

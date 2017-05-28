@@ -29,9 +29,11 @@ namespace Library_Management_System
             mb = new Member_Detail();
             mbController.addMember(mb);
             txt_member_id.Text = mb.member_id.ToString();
-            
+           
 
         }
+
+
 
         private void btn_addmember_Click(object sender, RoutedEventArgs e)
         {

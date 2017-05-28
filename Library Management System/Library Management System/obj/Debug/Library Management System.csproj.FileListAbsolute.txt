@@ -46,7 +46,6 @@ C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\L
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Library Management System.g.resources
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Library_Management_System.Properties.Resources.resources
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Library Management System.csproj.GenerateResource.Cache
-C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Add Book.g.cs
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Add Member.g.cs
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\AddUser.g.cs
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Explore_book.g.cs
@@ -55,7 +54,6 @@ C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\L
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\MainWindow.g.cs
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Manage Members.g.cs
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\View Book Details.g.cs
-C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Add Book.baml
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Add Member.baml
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\AddUser.baml
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Explore_book.baml
@@ -66,3 +64,5 @@ C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\L
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\View Book Details.baml
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Manage_System_User.g.cs
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Manage_System_User.baml
+C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\views\Add Book.g.cs
+C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\views\Add Book.baml

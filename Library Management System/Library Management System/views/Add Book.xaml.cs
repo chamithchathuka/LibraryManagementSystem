@@ -30,12 +30,31 @@ namespace Library_Management_System
 
             InitializeComponent();
             bk = new Book_Detail();
-
+            
+            
             bkcontoller.addBook(bk);
+
             txt_bookid.Text = "BKID"+bk.book_id.ToString();
+
+            fillLanguages();
+            fillBookType();
 
         }
 
+        private void fillLanguages()
+        {
+                       
+            cmb_languages.Items.Add("Englsh");
+            cmb_languages.Items.Add("Sinahala");
+            cmb_languages.Items.Add("Tamil");
+        }
+
+        private void fillBookType() {
+
+            cmb_booktype.Items.Add("Book");
+            cmb_booktype.Items.Add("Magazine");
+            cmb_booktype.Items.Add("Journal");
+        }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (!isNewBookAdded) { 
@@ -62,14 +81,20 @@ namespace Library_Management_System
             //string category = cmb_category.SelectedValue.ToString();
             string category = "cat 1";
             string publisher = txt_publisher.Text;
-            string language = txtlanguage.Text;
+
+            //   string language = ((ComboBoxItem)cmb_languages.SelectedItem).Content.ToString();
+
+            string language = "English";
+
             string isbn = txt_isbn.Text;
             string year = txt_year.Text;
             string noofPage = txt_no_of_pages.Text;
 
-            DateTime date_added = new DateTime();
-            //string type = cmb_booktype.SelectedItem.ToString();
+         
+            // string type = ((ComboBoxItem)cmb_booktype.SelectedItem).Content.ToString();
+
             string type = "Book";
+
             //            decimal price = Decimal.Parse(txt_price.Text);
 
             decimal price = 10;
@@ -86,14 +111,18 @@ namespace Library_Management_System
             bk.isbn = isbn;
             bk.year = year;
             bk.pages = noofPage;
-            bk.date_added = date_added;
+            bk.date_added = DateTime.Now;
             bk.type = type;
             bk.price = price;
             bk.description = description;
             bk.no_of_copies = noofCopies;
 
             isNewBookAdded  = bkcontoller.updateBook(bk);
-            
+            Console.Write("is book added" + isNewBookAdded);
+
+            if (isNewBookAdded) {
+                MessageBox.Show("Book added Successfully !", "Library MS", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
 
         }
     }

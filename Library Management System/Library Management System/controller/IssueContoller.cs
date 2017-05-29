@@ -9,9 +9,22 @@ namespace Library_Management_System.controller
     class IssueContoller
     {
 
-        public Boolean issueBook(Book_Detail book,Member_Detail member,DateTime issueDate, int daysToReturn)
+        public Boolean issueBook(Book_Detail book,Member_Detail member,DateTime issueDate, DateTime retrunDate)
         {
             Issue_Detail issueDetail = new Issue_Detail();
+            issueDetail.book_id = book.book_id;
+            issueDetail.member_id = member.member_id;
+
+            int copies =(int) book.no_of_copies;
+            Console.WriteLine("Number of copies now"+copies);
+            copies--;
+            book.no_of_copies = copies;
+
+            issueDetail.issue_date = issueDate;
+            issueDetail.due_date = retrunDate;
+                       
+            Console.WriteLine("issue book contoller called issue book" + issueDetail);
+            
             Boolean status = false;
             try
             {
@@ -22,6 +35,8 @@ namespace Library_Management_System.controller
                     db.SaveChanges();
                     status = true;
 
+                    BookController bookController = new BookController();
+                    bookController.updateBook(book);
                 }
             }
             catch (Exception ex)

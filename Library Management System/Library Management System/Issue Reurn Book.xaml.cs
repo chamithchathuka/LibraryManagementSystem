@@ -23,24 +23,31 @@ namespace Library_Management_System
     public partial class Issue_Reurn_Book : Window
     {
         BookController bkController;
-       
-        Member_Detail member_detail;
         MemberController memberController;
+        IssueContoller issueController;
+
+        Member_Detail member_detail;
+        
         Book_Detail currBook;
-        List<Book_Detail> bookBucket = new List<Book_Detail>();
+        List<Book_Detail> bookBasket = new List<Book_Detail>();
         public Issue_Reurn_Book()
         {
             InitializeComponent();
             bkController = new BookController();
             memberController = new MemberController();
+            issueController = new IssueContoller();
+
+            datepicker_issuedate.SelectedDate = DateTime.Today;
+            datepicker_returndate.SelectedDate = DateTime.Now.AddDays(7);
+            cmb_returnda_selector.Items.Add("3");
+            cmb_returnda_selector.Items.Add("5");
+            cmb_returnda_selector.Items.Add("7");
+            cmb_returnda_selector.Items.Add("14");
+            cmb_returnda_selector.Items.Add("21");
 
 
         }
 
-        private void txt_admission_number_Copy1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void btn_check_member_Click(object sender, RoutedEventArgs e)
         {
@@ -74,16 +81,22 @@ namespace Library_Management_System
             // int id = Util.StandardID_Generator.idExtractorGenerator(memID);
             //  Console.Write("ID :" + id + "mem ID" + memID);
             bk_detail = bkController.findByBookID(num);
+            
             currBook = bk_detail;
             if (bk_detail != null)
             {
+
+                if (bk_detail.no_of_copies == 0)
+                {
+                    MessageBox.Show("Sorry! Copies not available now");
+                }else { 
                 lbl_book_id_replace.Content = bk_detail.book_id;
                 lbl_book_name_replace.Content = bk_detail.title;
                 lbl_book_publisher_replace.Content = bk_detail.publisher;
                 lbl_isbn_replace.Content = bk_detail.isbn;
-                lbl_availablility_replace.Content = bk_detail.available;
+                lbl_availablility_replace.Content = bk_detail.no_of_copies;
                 lbl_cat_replace.Content = bk_detail.category;
-
+                }
 
             }
             else
@@ -95,19 +108,36 @@ namespace Library_Management_System
 
         private void btn_issue_Click(object sender, RoutedEventArgs e)
         {
-            
+            DateTime returnDate = datepicker_returndate.SelectedDate.Value;
+            DateTime issueDate = datepicker_issuedate.SelectedDate.Value;
+
+            if (bookBasket.Count > 0) {
+                Console.WriteLine("Count size "+bookBasket.Count);
+                foreach (Book_Detail book in bookBasket)
+                {
+                    issueController.issueBook(book, member_detail, issueDate, returnDate);
+                }
+
+            }
         }
 
 
         private void btn_add_Click(object sender, RoutedEventArgs e)
         {
-            if (currBook != null) {
-                MessageBox.Show("Book is Added to the bucket");
 
-                Console.Write("Real Book I found " + currBook.title);
-            //Console.WriteLine(currBook.book_id);
-            bookBucket.Add(currBook);
-                PrintValues(bookBucket);
+           
+            if (currBook != null) {
+                if (currBook.no_of_copies > 0)
+                {
+                    MessageBox.Show("Book is Added to the bucket");
+                    Console.Write("Real Book I found " + currBook.title);
+                    bookBasket.Add(currBook);
+                    PrintValues(bookBasket);
+
+                }
+                else {
+                    MessageBox.Show("Sorry! cannot issue copies are not available");
+                }
             }
 
         }

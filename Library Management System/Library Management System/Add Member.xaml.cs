@@ -64,6 +64,7 @@ namespace Library_Management_System
             md.admission_number = addmission;
             md.address = address;
             md.phone_number = phone;
+            md.dob = dob;
 
 
             Member_Validator validator = new Member_Validator();

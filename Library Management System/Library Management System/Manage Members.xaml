@@ -8,7 +8,7 @@
         WindowStartupLocation="CenterScreen"
         Title="Manage Members" Height="500" Width="800">
     <Grid>
-        <Button x:Name="btn_addnew" Content="Add New" HorizontalAlignment="Left" Margin="129,40,0,0" VerticalAlignment="Top" Width="93" Height="40"/>
+        <Button x:Name="btn_addnew" Content="Add New" HorizontalAlignment="Left" Margin="129,40,0,0" VerticalAlignment="Top" Width="93" Height="40" Click="btn_addnew_Click"/>
         <Button x:Name="btn_setpackage" Content="Set Package" HorizontalAlignment="Left" Margin="244,40,0,0" VerticalAlignment="Top" Width="92" Click="btn_setpackage_Click" Height="40"/>
         <Button x:Name="btn_memberdetails" Content="Member Details" HorizontalAlignment="Left" Margin="356,40,0,0" VerticalAlignment="Top" Width="119" Height="40" />
         <Button x:Name="btn_issue" Content="Issue / Return" HorizontalAlignment="Left" Margin="498,40,0,0" VerticalAlignment="Top" Width="118" Height="40"/>

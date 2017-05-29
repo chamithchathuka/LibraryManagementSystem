@@ -52,5 +52,19 @@ namespace Library_Management_System
         {
 
         }
+
+        private void btn_details_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Issue_Reurn_Book ex = new Issue_Reurn_Book();
+            ex.Show();
+        }
+
+        private void btn_manage_members_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Manage_Members mb = new Manage_Members();
+            mb.Show();
+        }
     }
 }

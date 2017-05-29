@@ -51,7 +51,7 @@ namespace Library_Management_System.controller
             return status;
         }
 
-        public Member_Detail findMemberById(string id)
+        public Member_Detail findMemberById(int id)
         {
             Member_Detail memberDetail = null;
 
@@ -71,7 +71,7 @@ namespace Library_Management_System.controller
             return memberDetail;
         }
 
-        public List<Member_Detail> searchMember(string constraint, string term, DateTime dob, int phonenumber,int addmission)
+        public List<Member_Detail> searchMember(string constraint, string term, DateTime dob, string phonenumber,string addmission)
         {
             List<Member_Detail> memberDetails = null;
 

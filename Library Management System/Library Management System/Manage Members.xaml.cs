@@ -28,5 +28,12 @@ namespace Library_Management_System
         {
 
         }
+
+        private void btn_addnew_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Add_Member mem = new Add_Member();
+            mem.Show();
+        }
     }
 }

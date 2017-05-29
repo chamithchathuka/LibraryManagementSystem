@@ -66,3 +66,5 @@ C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\L
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Manage_System_User.baml
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\views\Add Book.g.cs
 C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\views\Add Book.baml
+C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\FluentValidation.dll
+C:\Users\Chamith\Documents\Visual Studio 2015\Projects\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\FluentValidation.xml

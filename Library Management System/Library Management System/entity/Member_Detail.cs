@@ -20,7 +20,8 @@ namespace Library_Management_System
         [Column(TypeName = "date")]
         public DateTime? dob { get; set; }
 
-        public int? admission_number { get; set; }
+        [StringLength(100)]
+        public string admission_number { get; set; }
 
         [StringLength(50)]
         public string email { get; set; }
@@ -28,7 +29,8 @@ namespace Library_Management_System
         [StringLength(200)]
         public string address { get; set; }
 
-        public int? phone_number { get; set; }
+        [StringLength(100)]
+        public string phone_number { get; set; }
 
         [Column(TypeName = "image")]
         public byte[] photo { get; set; }

@@ -55,5 +55,7 @@ namespace Library_Management_System
         public string description { get; set; }
 
         public int? no_of_copies { get; set; }
+
+        
     }
 }

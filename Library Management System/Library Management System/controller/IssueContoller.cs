@@ -1,30 +1,33 @@
-﻿using System;
+﻿using Library_Management_System;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity.Migrations;
 
 namespace Library_Management_System.controller
 {
     class IssueContoller
     {
 
-        public Boolean issueBook(Book_Detail book,Member_Detail member,DateTime issueDate, DateTime retrunDate)
+        public Boolean issueBook(Book_Detail book, Member_Detail member, DateTime issueDate, DateTime retrunDate)
         {
             Issue_Detail issueDetail = new Issue_Detail();
             issueDetail.book_id = book.book_id;
             issueDetail.member_id = member.member_id;
 
-            int copies =(int) book.no_of_copies;
-            Console.WriteLine("Number of copies now"+copies);
+            int copies = (int)book.no_of_copies;
+            Console.WriteLine("Number of copies now" + copies);
             copies--;
             book.no_of_copies = copies;
 
             issueDetail.issue_date = issueDate;
             issueDetail.due_date = retrunDate;
-                       
+
             Console.WriteLine("issue book contoller called issue book" + issueDetail);
-            
+
             Boolean status = false;
             try
             {
@@ -41,9 +44,102 @@ namespace Library_Management_System.controller
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException);
+                Console.WriteLine("issue error "+ex.InnerException);
             }
             return status;
         }
+
+        public List<Issue_Detail> getReturnBookDetail(int memberID)
+        {
+            List<Issue_Detail> issueBookDetail = null;
+            Console.WriteLine("getReturnBookDetail called");
+            try
+            {
+                using (var db = new ModelDB())
+                {
+
+                    issueBookDetail = db.Issue_Detail
+                    .Where(returnbook => returnbook.member_id == memberID & returnbook.return_date == null)
+                    .ToList();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException);
+            }
+            return issueBookDetail;
+        }
+
+        public List<Issue_Detail> loadIssuedBooks()
+        {
+            List<Issue_Detail> issues = new List<Issue_Detail>();
+
+            try
+            {
+                using (var db = new ModelDB())
+                {
+
+                    var query = from issue in db.Issue_Detail select new { issue.book_id, issue.due_date };
+                    var list = query.ToList();
+
+                    foreach (var detail in list) {
+                        int? num  = detail.book_id;
+                        DateTime? datetime =  detail.due_date;
+
+                        Console.WriteLine("number ");
+
+                        Issue_Detail issueD = new Issue_Detail();
+                        issueD.due_date = datetime;
+                        issueD.book_id = num;
+
+                        issues.Add(issueD);
+                    }
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Load exception"+ex.InnerException);
+            }
+
+            return issues;
+       }
+
+        public Boolean bookReturnedUpdate(Issue_Detail issue)
+        {
+
+            BookController bookController = new BookController();
+            int bookID = (int) issue.book_id;
+            Book_Detail book = bookController.findByBookID(bookID);
+            int noOfCopies = (int) book.no_of_copies;
+            book.no_of_copies = ++noOfCopies;
+
+            bookController.updateBook(book);
+
+
+            Boolean status = false;
+            try
+            {
+                using (var db = new ModelDB())
+                {
+                    Console.WriteLine("This is covered"+ issue.return_date);
+                    db.Issue_Detail.AddOrUpdate(issue);
+                    db.SaveChanges();
+                    status = true;
+                 
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Book return update "+ex.InnerException);
+            }
+            return status;
+        }
+
+
     }
 }

@@ -8,7 +8,7 @@
         WindowStartupLocation="CenterScreen"
        Title="Explore Books" Height="500" Width="800">
     <Grid>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="264" Margin="75,113,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="266" Margin="79,137,0,0" VerticalAlignment="Top" Width="100"/>
         <Label x:Name="lbl_categories" Content="Categories" HorizontalAlignment="Left" Margin="101,41,0,0" VerticalAlignment="Top" Width="100"/>
         <Label x:Name="lbl_search" Content="Search" HorizontalAlignment="Left" Margin="296,24,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txt_search" HorizontalAlignment="Left" Height="23" Margin="357,24,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="192"/>

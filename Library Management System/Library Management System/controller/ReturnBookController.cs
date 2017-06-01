@@ -51,7 +51,7 @@ namespace Library_Management_System.controller
             return status;
         }
 
-        public List<Return_Book> searchReturnedBook(string constraint, string term, DateTime dob, int bookid, int memberid,DateTime issuedate, DateTime duedate)
+        public List<Return_Book> searchReturnedBook(string constraint, string term, DateTime dob, int bookid,int issueID, int memberid,DateTime issuedate, DateTime duedate)
         {
             List<Return_Book> returnedBooks = null;
 
@@ -74,20 +74,26 @@ namespace Library_Management_System.controller
                        .Where(b => b.member_id == memberid)
                        .ToList();
                     }
+                    if (constraint == "issue_id")
+                    {
+                       returnedBooks = db.Return_Book
+                       .Where(b => b.issue_id == issueID)
+                       .ToList();
+                    }
                     if (constraint == "issue_date")
                     {
-
                         returnedBooks = db.Return_Book
                        .Where(b => b.issue_date == issuedate)
                        .ToList();
                     }
                     if (constraint == "due_date")
                     {
-
-                        returnedBooks = db.Return_Book
+                       returnedBooks = db.Return_Book
                        .Where(b => b.due_date == duedate)
                        .ToList();
                     }
+
+
                 }
             }
             catch (Exception ex)
@@ -97,6 +103,7 @@ namespace Library_Management_System.controller
             return returnedBooks;
         }
 
+        
 
 
     }

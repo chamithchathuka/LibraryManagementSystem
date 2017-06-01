@@ -56,7 +56,7 @@ namespace Library_Management_System.controller
             {
                 using (var db = new ModelDB())
                 {
-
+                    Console.WriteLine("Book detail updated");
                     db.Book_Detail.AddOrUpdate(book);
                     db.SaveChanges();
                     status = true;
@@ -65,12 +65,12 @@ namespace Library_Management_System.controller
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException);
+                Console.WriteLine("Update book problem "+ex.InnerException);
             }
             return status;
         }
 
-        public Book_Detail findByBookNumber(string book_no)
+        public Book_Detail findByBookNumber(int book_no)
         {
             Book_Detail bookDetail = null;
             try

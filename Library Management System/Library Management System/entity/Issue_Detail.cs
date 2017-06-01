@@ -9,7 +9,7 @@ namespace Library_Management_System
     public partial class Issue_Detail
     {
         [Key]
-        public int issue_id { get; set; }
+        public int? issue_id { get; set; }
 
         public int? member_id { get; set; }
 
@@ -20,5 +20,15 @@ namespace Library_Management_System
         public DateTime? due_date { get; set; }
 
         public int? book_id { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? return_date { get; set; }
+
+        public double? fine { get; set; }
+
+        [MaxLength(10)]
+        public byte[] is_finepaid { get; set; }
+
+        
     }
 }

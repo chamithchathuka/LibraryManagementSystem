@@ -66,5 +66,12 @@ namespace Library_Management_System
             Manage_Members mb = new Manage_Members();
             mb.Show();
         }
+
+        private void btn_return_detail_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            ReturnBook mb = new ReturnBook();
+            mb.Show();
+        }
     }
 }

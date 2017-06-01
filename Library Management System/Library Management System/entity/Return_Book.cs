@@ -13,6 +13,8 @@ namespace Library_Management_System
 
         public int? book_id { get; set; }
 
+        public int? issue_id { get; set; }
+
         public int? member_id { get; set; }
 
         [Column(TypeName = "date")]

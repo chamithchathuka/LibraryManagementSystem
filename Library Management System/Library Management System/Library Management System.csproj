@@ -102,12 +102,19 @@
     <Compile Include="Manage_System_User.xaml.cs">
       <DependentUpon>Manage_System_User.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReturnBook.xaml.cs">
+      <DependentUpon>ReturnBook.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Util\EncryptionUtil.cs" />
     <Compile Include="Util\StandardID Generator.cs" />
     <Compile Include="Validator\Member_Validator.cs" />
     <Compile Include="View Book Details.xaml.cs">
       <DependentUpon>View Book Details.xaml</DependentUpon>
     </Compile>
+    <Page Include="ReturnBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\Add Book.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

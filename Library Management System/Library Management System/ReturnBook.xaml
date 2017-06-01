@@ -1,0 +1,60 @@
+﻿<Window x:Class="Library_Management_System.ReturnBook"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_Management_System"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Return Books" Height="500" Width="800">
+    <Grid>
+        <Image x:Name="book_detail" HorizontalAlignment="Left" Height="136" Margin="471,151,0,0" VerticalAlignment="Top" Width="158"/>
+        <Grid HorizontalAlignment="Left"  x:Name="memberdetail_column"  Height="169" Margin="491,21,0,0" VerticalAlignment="Top" Width="283" Background="#FFF7F7F7">
+            <Label x:Name="lbl_member_id" Content="Student_ID" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="153,41,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lbl_member_heading" Content="Member Details" HorizontalContentAlignment="Center" Margin="0,10,10,0" VerticalAlignment="Top"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="113" Margin="10,41,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lbl_student_name" Content="Student_Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="153,88,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lbl_phone_number" Content="Phone_Number" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="153,128,0,0" VerticalAlignment="Top" Width="120"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="252" Margin="394,208,0,0" VerticalAlignment="Top" Width="380" Background="#FFF7F7F7">
+            <Label x:Name="lbl_book_detail" Content="Book Detail" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,9,-1,0"/>
+            <Image x:Name="book_detail_Copy" HorizontalAlignment="Left" Height="136" Margin="10,72,0,0" VerticalAlignment="Top" Width="158"/>
+            <Label x:Name="lbl_book_id" Content="Book_ID" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="180,40,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_book_id_replace" Content="Book_ID" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,40,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_edition" Content="Edition" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="180,134,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_book_name" Content="Book_Name" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="180,71,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_book_name_replace" Content="Book_Name" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,72,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_availablility" Content="No of Copies " HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="180,200,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_availablility_replace" Content="Availability" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,200,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_publisher" Content="Publisher" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="180,103,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.376,0.474"/>
+            <Label x:Name="lbl_book_publisher_replace" Content="Publisher" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,103,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_category" Content="Category" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="180,225,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_cat_replace" Content="Caegory Replace" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,226,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_isbn_replace" Content="ISBN" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,169,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_isbn" Content="ISBN" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="180,169,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_edition_replace" Content="Edition" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,134,0,0" VerticalAlignment="Top" Width="87"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="169" Margin="90,21,0,0" VerticalAlignment="Top" Width="370" Background="#FFF7F7F7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lbl_memberid" Content="Member ID" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Height="26" Width="70"/>
+            <TextBox x:Name="txt_memberid" HorizontalAlignment="Left" Height="23" Margin="99,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
+            <Button x:Name="btn_return" Content="Return" HorizontalAlignment="Left" Margin="252,67,0,0" VerticalAlignment="Top" Width="100" Height="23"   />
+            <Button x:Name="btn_check_member" Content="Search" HorizontalAlignment="Left" Margin="252,22,0,0" VerticalAlignment="Top" Width="100" Height="23" Click="btn_check_member_Click_1"  />
+        </Grid>
+        <DataGrid x:Name="dataGrid"   IsReadOnly="True" AutoGenerateColumns="False" Margin="90,208,416.6,10.4" SelectionChanged="selectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding book_id}" Width="75" Header="Book ID"/>
+                <DataGridTextColumn Binding="{Binding due_date}" Width="150" Header="Due Date"/>
+                <DataGridTemplateColumn  Width="*">
+                <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="b1" Click="button_click"></Button></DataTemplate>        
+                 </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                </DataGrid.Columns>
+      </DataGrid>
+    </Grid>
+</Window>

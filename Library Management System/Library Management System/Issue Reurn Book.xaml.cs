@@ -25,6 +25,9 @@ namespace Library_Management_System
         BookController bkController;
         MemberController memberController;
         IssueContoller issueController;
+        ReturnBookController returnController;
+
+        int count = 0;
 
         Member_Detail member_detail;
         
@@ -36,6 +39,7 @@ namespace Library_Management_System
             bkController = new BookController();
             memberController = new MemberController();
             issueController = new IssueContoller();
+            returnController = new ReturnBookController();
 
             datepicker_issuedate.SelectedDate = DateTime.Today;
             datepicker_returndate.SelectedDate = DateTime.Now.AddDays(7);
@@ -75,8 +79,7 @@ namespace Library_Management_System
         {
             string bookID = txt_bookid.Text.Trim();
             int num = Int32.Parse(bookID);
-            Book_Detail bk_detail = new Book_Detail();
-            
+            Book_Detail bk_detail = new Book_Detail();            
 
             // int id = Util.StandardID_Generator.idExtractorGenerator(memID);
             //  Console.Write("ID :" + id + "mem ID" + memID);
@@ -132,6 +135,8 @@ namespace Library_Management_System
                     MessageBox.Show("Book is Added to the bucket");
                     Console.Write("Real Book I found " + currBook.title);
                     bookBasket.Add(currBook);
+                    lbl_bookcount.Content = ++count;
+                    lbl_availablility_replace.Content = --currBook.no_of_copies;
                     PrintValues(bookBasket);
 
                 }
@@ -152,5 +157,19 @@ namespace Library_Management_System
            
         }
 
+        private void btn_return_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            //List<Issue_Detail>  listofBooks = issueController.getReturnBookDetail(member_detail.member_id);
+
+            //foreach (Issue_Detail item in listofBooks)
+            //{
+            //    Console.WriteLine("non returned books "+ item.book_id);
+            //}
+
+  
+
+        }
     }
 }

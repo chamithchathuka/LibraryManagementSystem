@@ -9,7 +9,7 @@
         Title="Issue / Return Books" Height="500" Width="800">
     <Grid>
         <Image x:Name="book_detail" HorizontalAlignment="Left" Height="136" Margin="471,151,0,0" VerticalAlignment="Top" Width="158"/>
-        <Grid HorizontalAlignment="Left" Height="312" Margin="90,148,0,0" VerticalAlignment="Top" Width="194" Background="#FFF7F7F7">
+        <Grid HorizontalAlignment="Left"  x:Name="memberdetail_column"  Height="312" Margin="90,148,0,0" VerticalAlignment="Top" Width="194" Background="#FFF7F7F7">
             <Label x:Name="lbl_member_id" Content="Student_ID" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="40,189,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="lbl_member_heading" Content="Member Details" HorizontalContentAlignment="Center" Margin="0,10,10,0" VerticalAlignment="Top"/>
             <Image x:Name="image" HorizontalAlignment="Left" Height="113" Margin="40,57,0,0" VerticalAlignment="Top" Width="120"/>
@@ -44,7 +44,7 @@
             <TextBox x:Name="txt_bookid" HorizontalAlignment="Left" Height="23" Margin="180,11,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="160"/>
             <Button x:Name="btn_issue" Content="Issue" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="160" Height="24" Click="btn_issue_Click" Grid.Column="1"/>
             <Button x:Name="btn_return" Content="Return" HorizontalAlignment="Left" Margin="0,41,0,0" VerticalAlignment="Top" Width="160
-                    " Height="23" Grid.Column="1"/>
+                    " Height="23" Grid.Column="1" Click="btn_return_Click"/>
             <Button x:Name="btn_check_member" Content="Search" HorizontalAlignment="Left" Margin="355,43,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn_check_member_Click" />
             <Button x:Name="btn_check_book" Content="Search" HorizontalAlignment="Left" Margin="355,11,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn_check_book_Click"/>
             <DatePicker x:Name="datepicker_issuedate" HorizontalAlignment="Left" Margin="0,75,0,0" VerticalAlignment="Top" Height="28" Grid.Column="1" Width="160"/>

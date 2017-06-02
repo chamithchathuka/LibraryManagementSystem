@@ -56,6 +56,10 @@ namespace Library_Management_System
 
         public int? no_of_copies { get; set; }
 
-        
+        public override string ToString() {
+            return "Book detail " + title+" copies "+no_of_copies;
+
+
+        }
     }
 }

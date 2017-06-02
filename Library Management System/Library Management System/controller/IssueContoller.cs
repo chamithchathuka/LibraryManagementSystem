@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity.Migrations;
+
+
 
 namespace Library_Management_System.controller
 {
@@ -67,7 +69,7 @@ namespace Library_Management_System.controller
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException);
+                Console.WriteLine("get return book details "+ex.InnerException);
             }
             return issueBookDetail;
         }
@@ -115,27 +117,38 @@ namespace Library_Management_System.controller
             int bookID = (int) issue.book_id;
             Book_Detail book = bookController.findByBookID(bookID);
             int noOfCopies = (int) book.no_of_copies;
-            book.no_of_copies = ++noOfCopies;
 
+            book.no_of_copies = ++noOfCopies;
+            Console.Write("just before the update");
             bookController.updateBook(book);
 
-
+            Console.WriteLine("Issue ID" +issue.issue_id);
             Boolean status = false;
             try
             {
                 using (var db = new ModelDB())
                 {
-                    Console.WriteLine("This is covered"+ issue.return_date);
-                    db.Issue_Detail.AddOrUpdate(issue);
-                    db.SaveChanges();
-                    status = true;
+
+                   
+                   
+                    DateTime issueD = (DateTime) issue.return_date;
+                    Console.WriteLine("Details " + issueD);
+
+                    db.Entry(issue).State = EntityState.Modified;
+
+                    db.Issue_Detail.Attach(issue);
+              
                  
+                    Console.WriteLine("data is updated" +db.SaveChanges());
+
+                    status = true;
+
 
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Book return update "+ex.InnerException);
+                Console.WriteLine("Book return update error " + ex.InnerException);
             }
             return status;
         }

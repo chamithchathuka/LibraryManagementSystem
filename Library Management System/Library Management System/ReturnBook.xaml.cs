@@ -45,17 +45,25 @@ namespace Library_Management_System
 
         private void button_click(object sender, RoutedEventArgs e) {
 
-        
+
 
             Issue_Detail issueDetail = dataGrid.SelectedItem as Issue_Detail;
             issueDetail.return_date = DateTime.Now;
 
-            issueContoller.bookReturnedUpdate(issueDetail);
-            
-            int memberid = Int32.Parse(txt_memberid.Text.Trim());
+            bool result = issueContoller.bookReturnedUpdate(issueDetail);
 
-            dataGrid.ItemsSource = issueContoller.getReturnBookDetail(memberid);
+            if (result)
+            {
 
+                int memberid = Int32.Parse(txt_memberid.Text.Trim());
+
+                dataGrid.ItemsSource = issueContoller.getReturnBookDetail(memberid);
+            }
+            else {
+
+                MessageBox.Show("Faild to Update ");
+
+            }
 
 
         }

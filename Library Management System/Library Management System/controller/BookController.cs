@@ -84,7 +84,7 @@ namespace Library_Management_System.controller
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException);
+                Console.WriteLine("find book by no "+ex.InnerException);
             }
             return bookDetail;
         }
@@ -103,7 +103,7 @@ namespace Library_Management_System.controller
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException);
+                Console.WriteLine("find book by id "+ex.InnerException);
             }
             return bookDetail;
         }
@@ -206,7 +206,7 @@ namespace Library_Management_System.controller
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException);
+                Console.WriteLine("delete book "+ex.InnerException);
             }
             return status;
        }

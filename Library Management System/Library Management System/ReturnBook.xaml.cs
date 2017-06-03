@@ -25,6 +25,7 @@ namespace Library_Management_System
 
         private IssueContoller issueContoller;
         private BookController bookController;
+        private MemberController memberContoller;
        
       
         public ReturnBook()
@@ -33,6 +34,10 @@ namespace Library_Management_System
           
             issueContoller = new IssueContoller();
             bookController = new BookController();
+            memberContoller = new MemberController();
+
+
+            txt_memberid.Focus();
 
             //dataGrid.ItemsSource = issueContoller.loadIssuedBooks();
         }
@@ -43,10 +48,33 @@ namespace Library_Management_System
 
         }
 
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                string memberID = txt_memberid.Text.Trim();
+                if (memberID.Equals(null) || memberID.Equals(""))
+                {
+                    MessageBox.Show("Please insert member ID");
+                }
+                else {
+                    btn_check_member_Click_1(sender, e);
+                   
+                }
+              
+            }
+            
+
+            if (e.Key == Key.Escape)
+            {
+                this.Close();
+                new Library_Management_System.Home().Show();
+                
+            }
+        }
+
         private void button_click(object sender, RoutedEventArgs e) {
-
-
-
+            
             Issue_Detail issueDetail = dataGrid.SelectedItem as Issue_Detail;
             issueDetail.return_date = DateTime.Now;
 
@@ -57,7 +85,15 @@ namespace Library_Management_System
 
                 int memberid = Int32.Parse(txt_memberid.Text.Trim());
 
-                dataGrid.ItemsSource = issueContoller.getReturnBookDetail(memberid);
+                List<Issue_Detail> issueDetails = issueContoller.getReturnBookDetail(memberid);
+
+                if (issueDetails.Count > 0) {
+                   dataGrid.ItemsSource = issueContoller.getReturnBookDetail(memberid);
+                    Console.WriteLine("Returned book count "+issueDetails.Count);
+                } else {
+                    MessageBox.Show("No books to retuen for the current user");
+                }
+
             }
             else {
 
@@ -94,8 +130,53 @@ namespace Library_Management_System
         private void btn_check_member_Click_1(object sender, RoutedEventArgs e)
         {
 
-            int memberid = Int32.Parse(txt_memberid.Text.Trim());
-            dataGrid.ItemsSource = issueContoller.getReturnBookDetail(memberid);
+           
+
+
+           
+            if (txt_memberid.Text.Equals(null) || txt_memberid.Text.Equals(""))
+            {
+                MessageBox.Show("Text Filed is empty");
+
+            }
+            else {
+                string memberidStr = txt_memberid.Text.Trim();
+              
+                int memberid;
+                bool parseResult = int.TryParse(memberidStr, out memberid);
+
+                if (parseResult)
+                {
+                    Member_Detail memberDetail = memberContoller.findMemberById(memberid);
+
+                    if (memberDetail != null)
+                    {
+                        lbl_member_id.Content = memberDetail.member_id;
+                        lbl_student_name.Content = memberDetail.first_name + " " + memberDetail.last_name;
+                        lbl_phone_number.Content = memberDetail.phone_number;
+
+                        List<Issue_Detail> issueDetails = issueContoller.getReturnBookDetail(memberid);
+
+                        if (issueDetails.Count > 0)
+                        {
+                            dataGrid.ItemsSource = issueContoller.getReturnBookDetail(memberid);
+                            Console.WriteLine("Returned book count " + issueDetails.Count);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No books to retuen for the current user");
+                        }
+                    }
+                    else {
+                        MessageBox.Show("no such member");
+
+                    }
+                }
+                else {
+                    MessageBox.Show("Please input a number");
+                }
+
+            }
 
         }
     }

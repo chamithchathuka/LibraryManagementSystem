@@ -119,9 +119,7 @@ namespace Library_Management_System.controller
             int noOfCopies = (int) book.no_of_copies;
 
             book.no_of_copies = ++noOfCopies;
-            Console.Write("just before the update");
-         
-
+                
             Console.WriteLine("Issue ID" +issue.issue_id);
             Boolean status = false;
             try

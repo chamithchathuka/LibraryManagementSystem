@@ -37,6 +37,13 @@ namespace Library_Management_System
 
         }
 
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btn_addmember_Click(sender, e);
+            }
+        }
 
 
         private void btn_addmember_Click(object sender, RoutedEventArgs e)

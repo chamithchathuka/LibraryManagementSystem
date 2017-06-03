@@ -24,6 +24,26 @@ namespace Library_Management_System
             InitializeComponent();
         }
 
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.D1)
+            {
+                btn_issue_return_Click(sender, e);
+            }
+
+            if (e.Key == Key.D2)
+            {
+                btn_return_detail_Click(sender, e);
+            }
+
+            if (e.Key == Key.D3)
+            {
+                btn_explorer_Click(sender, e);
+            }
+        
+
+        }
+
         private void btn_return_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -34,7 +54,7 @@ namespace Library_Management_System
 
         private void btn_settigs_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            this.Close();
             Manage_System_User mb = new Manage_System_User();
             mb.Show();
 
@@ -43,33 +63,33 @@ namespace Library_Management_System
 
         private void btn_explorer_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            this.Close();
             Explore_book ex = new Explore_book();
             ex.Show();
         }
 
         private void btn_issue_return_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void btn_details_Click(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
+            this.Close();
             Issue_Reurn_Book ex = new Issue_Reurn_Book();
             ex.Show();
         }
 
+        private void btn_details_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
         private void btn_manage_members_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            this.Close();
             Manage_Members mb = new Manage_Members();
             mb.Show();
         }
 
         private void btn_return_detail_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            this.Close();
             ReturnBook mb = new ReturnBook();
             mb.Show();
         }

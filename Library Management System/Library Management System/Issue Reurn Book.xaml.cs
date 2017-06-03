@@ -52,6 +52,14 @@ namespace Library_Management_System
 
         }
 
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                this.Close();
+                new Home().Show();
+            }
+        }
 
         private void btn_check_member_Click(object sender, RoutedEventArgs e)
         {
@@ -156,6 +164,8 @@ namespace Library_Management_System
             }
            
         }
+
+
 
         private void btn_return_Click(object sender, RoutedEventArgs e)
         {

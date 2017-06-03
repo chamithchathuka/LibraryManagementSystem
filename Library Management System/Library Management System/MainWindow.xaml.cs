@@ -37,8 +37,6 @@ namespace Library_Management_System
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-           
-
             string username = txt_username.Text;
             string password = txt_password.Password;
 

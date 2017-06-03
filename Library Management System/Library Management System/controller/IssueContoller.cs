@@ -120,7 +120,7 @@ namespace Library_Management_System.controller
 
             book.no_of_copies = ++noOfCopies;
             Console.Write("just before the update");
-            bookController.updateBook(book);
+         
 
             Console.WriteLine("Issue ID" +issue.issue_id);
             Boolean status = false;
@@ -128,22 +128,13 @@ namespace Library_Management_System.controller
             {
                 using (var db = new ModelDB())
                 {
+                    bookController.updateBook(book);
 
-                   
-                   
-                    DateTime issueD = (DateTime) issue.return_date;
-                    Console.WriteLine("Details " + issueD);
-
-                    db.Entry(issue).State = EntityState.Modified;
-
-                    db.Issue_Detail.Attach(issue);
-              
-                 
-                    Console.WriteLine("data is updated" +db.SaveChanges());
-
+                    var entry = db.Entry(issue);
+                    entry.State = EntityState.Modified;
+                    db.SaveChanges();
+                    
                     status = true;
-
-
                 }
             }
             catch (Exception ex)

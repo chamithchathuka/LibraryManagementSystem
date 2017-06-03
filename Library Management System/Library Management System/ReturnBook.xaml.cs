@@ -26,17 +26,19 @@ namespace Library_Management_System
         private IssueContoller issueContoller;
         private BookController bookController;
         private MemberController memberContoller;
+        
        
       
         public ReturnBook()
         {
             InitializeComponent();
-          
+
+            dp_returndate.SelectedDate =   DateTime.Now;
+
             issueContoller = new IssueContoller();
             bookController = new BookController();
             memberContoller = new MemberController();
-
-
+            
             txt_memberid.Focus();
 
             //dataGrid.ItemsSource = issueContoller.loadIssuedBooks();
@@ -58,8 +60,7 @@ namespace Library_Management_System
                     MessageBox.Show("Please insert member ID");
                 }
                 else {
-                    btn_check_member_Click_1(sender, e);
-                   
+                    btn_check_member_Click_1(sender, e);       
                 }
               
             }
@@ -76,7 +77,21 @@ namespace Library_Management_System
         private void button_click(object sender, RoutedEventArgs e) {
             
             Issue_Detail issueDetail = dataGrid.SelectedItem as Issue_Detail;
+
             issueDetail.return_date = DateTime.Now;
+            DateTime dateDue = (DateTime) issueDetail.due_date;
+
+            DateTime returnDate = (DateTime)dp_returndate.SelectedDate;
+
+            if (returnDate > dateDue) {
+
+                
+                double noOfDays = (returnDate - dateDue).TotalDays;
+                MessageBox.Show("Delayed return of a book");
+
+                lbl_fine.Content = noOfDays;
+
+            }
 
             bool result = issueContoller.bookReturnedUpdate(issueDetail);
 
@@ -129,11 +144,7 @@ namespace Library_Management_System
 
         private void btn_check_member_Click_1(object sender, RoutedEventArgs e)
         {
-
-           
-
-
-           
+                      
             if (txt_memberid.Text.Equals(null) || txt_memberid.Text.Equals(""))
             {
                 MessageBox.Show("Text Filed is empty");
@@ -141,24 +152,30 @@ namespace Library_Management_System
             }
             else {
                 string memberidStr = txt_memberid.Text.Trim();
-              
+
                 int memberid;
+
                 bool parseResult = int.TryParse(memberidStr, out memberid);
 
                 if (parseResult)
                 {
                     Member_Detail memberDetail = memberContoller.findMemberById(memberid);
 
+             
                     if (memberDetail != null)
                     {
                         lbl_member_id.Content = memberDetail.member_id;
                         lbl_student_name.Content = memberDetail.first_name + " " + memberDetail.last_name;
                         lbl_phone_number.Content = memberDetail.phone_number;
 
+
                         List<Issue_Detail> issueDetails = issueContoller.getReturnBookDetail(memberid);
+                        
 
                         if (issueDetails.Count > 0)
                         {
+
+                            
                             dataGrid.ItemsSource = issueContoller.getReturnBookDetail(memberid);
                             Console.WriteLine("Returned book count " + issueDetails.Count);
                         }

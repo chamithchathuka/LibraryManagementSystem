@@ -45,8 +45,8 @@
             <Button x:Name="btn_check_member" Content="Search" HorizontalAlignment="Left" Margin="252,22,0,0" VerticalAlignment="Top" Width="100" Height="23" Click="btn_check_member_Click_1"  />
             <DatePicker x:Name="dp_returndate" HorizontalAlignment="Left" Margin="99,69,0,0" VerticalAlignment="Top" Width="132"/>
             <Label x:Name="lbl_returndate" Content="Return Date" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="77"/>
-            <Label x:Name="lbl_fine" Content="Fine" HorizontalAlignment="Left" Margin="288,51,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="label" Content="" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="252,100,0,0" VerticalAlignment="Top" Height="43" Width="100"/>
+            <Label x:Name="lbl_fine" Content="Fine" HorizontalAlignment="Left" Margin="274,103,0,0" VerticalAlignment="Top" FontSize="24"/>
+            <Button x:Name="btn_complete_checkout" Content="Check out" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="253,71,0,0"/>
         </Grid>
         <DataGrid x:Name="dataGrid"   IsReadOnly="True" AutoGenerateColumns="False" Margin="90,208,416.6,10.4" SelectionChanged="selectionChanged">
             <DataGrid.Columns>

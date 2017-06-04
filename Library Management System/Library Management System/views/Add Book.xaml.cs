@@ -125,5 +125,11 @@ namespace Library_Management_System
             }
 
         }
+
+        private void btn_clear_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            new Add_Book().Show();
+        }
     }
 }

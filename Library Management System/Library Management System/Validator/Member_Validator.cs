@@ -11,7 +11,7 @@ namespace Library_Management_System.Validator
     {
 
         public Member_Validator() {
-            RuleFor(member => member.member_id).NotEmpty().NotNull().WithMessage("Please insert your {PropertyName}");
+            
             RuleFor(member => member.first_name).NotEmpty().NotNull().WithMessage("Please insert your {PropertyName}"); 
             RuleFor(member => member.last_name).NotEmpty().NotNull().WithMessage("Please insert your {PropertyName}"); 
             RuleFor(member => member.phone_number).NotEmpty().NotNull().WithMessage("Please insert your {PropertyName}"); 

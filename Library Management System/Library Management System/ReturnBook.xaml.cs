@@ -26,6 +26,7 @@ namespace Library_Management_System
         private IssueContoller issueContoller;
         private BookController bookController;
         private MemberController memberContoller;
+        private double finePerDay;
         
        
       
@@ -34,7 +35,7 @@ namespace Library_Management_System
             InitializeComponent();
 
             dp_returndate.SelectedDate =   DateTime.Now;
-
+            finePerDay = 10;
             issueContoller = new IssueContoller();
             bookController = new BookController();
             memberContoller = new MemberController();
@@ -89,7 +90,7 @@ namespace Library_Management_System
                 double noOfDays = (returnDate - dateDue).TotalDays;
                 MessageBox.Show("Delayed return of a book");
 
-                lbl_fine.Content = noOfDays;
+                lbl_fine.Content = noOfDays*finePerDay;
 
             }
 

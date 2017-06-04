@@ -1,0 +1,123 @@
+-- --------------------------------------------------------
+-- Host:                         cc\SQLEXPRESS
+-- Server version:               Microsoft SQL Server 2008 R2 (SP2) - 10.50.4000.0
+-- Server OS:                    Windows NT 6.2 <X64> (Build 9200: )
+-- HeidiSQL Version:             9.4.0.5125
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES  */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+-- Dumping database structure for LibraryDB
+CREATE DATABASE IF NOT EXISTS "LibraryDB";
+USE "LibraryDB";
+
+-- Dumping structure for table LibraryDB.Book_Detail
+CREATE TABLE IF NOT EXISTS "Book_Detail" (
+	"book_id" INT(10,0) NOT NULL,
+	"book_no" VARCHAR(50) NULL DEFAULT NULL,
+	"title" VARCHAR(50) NULL DEFAULT NULL,
+	"author" VARCHAR(50) NULL DEFAULT NULL,
+	"category" VARCHAR(50) NULL DEFAULT NULL,
+	"publisher" VARCHAR(50) NULL DEFAULT NULL,
+	"language" VARCHAR(50) NULL DEFAULT NULL,
+	"isbn" VARCHAR(50) NULL DEFAULT NULL,
+	"year" VARCHAR(50) NULL DEFAULT NULL,
+	"pages" VARCHAR(50) NULL DEFAULT NULL,
+	"image" IMAGE(2147483647) NULL DEFAULT NULL,
+	"date_added" DATE(0) NULL DEFAULT NULL,
+	"type" VARCHAR(50) NULL DEFAULT NULL,
+	"available" VARCHAR(50) NULL DEFAULT NULL,
+	"price" DECIMAL(18,0) NULL DEFAULT NULL,
+	"description" VARCHAR(500) NULL DEFAULT NULL,
+	"no_of_copies" INT(10,0) NULL DEFAULT NULL,
+	PRIMARY KEY ("book_id")
+);
+
+-- Data exporting was unselected.
+-- Dumping structure for table LibraryDB.Category
+CREATE TABLE IF NOT EXISTS "Category" (
+	"category" VARCHAR(50) NULL DEFAULT NULL,
+	"shelf" VARCHAR(50) NULL DEFAULT NULL
+);
+
+-- Data exporting was unselected.
+-- Dumping structure for table LibraryDB.Issue_Detail
+CREATE TABLE IF NOT EXISTS "Issue_Detail" (
+	"issue_id" INT(10,0) NOT NULL,
+	"member_id" INT(10,0) NULL DEFAULT NULL,
+	"issue_date" DATE(0) NULL DEFAULT NULL,
+	"due_date" DATE(0) NULL DEFAULT NULL,
+	"book_id" INT(10,0) NULL DEFAULT NULL,
+	"return_date" DATE(0) NULL DEFAULT NULL,
+	"fine" DECIMAL(18,0) NULL DEFAULT NULL,
+	"is_finepaid" VARBINARY(10) NULL DEFAULT NULL,
+	PRIMARY KEY ("issue_id")
+);
+
+-- Data exporting was unselected.
+-- Dumping structure for table LibraryDB.Language
+CREATE TABLE IF NOT EXISTS "Language" (
+	"id" INT(10,0) NOT NULL,
+	"language" VARCHAR(50) NULL DEFAULT NULL,
+	PRIMARY KEY ("id")
+);
+
+-- Data exporting was unselected.
+-- Dumping structure for table LibraryDB.Member_Detail
+CREATE TABLE IF NOT EXISTS "Member_Detail" (
+	"member_id" INT(10,0) NOT NULL,
+	"first_name" VARCHAR(50) NULL DEFAULT NULL,
+	"last_name" VARCHAR(50) NULL DEFAULT NULL,
+	"dob" DATE(0) NULL DEFAULT NULL,
+	"admission_number" VARCHAR(200) NULL DEFAULT NULL,
+	"email" VARCHAR(50) NULL DEFAULT NULL,
+	"address" VARCHAR(200) NULL DEFAULT NULL,
+	"phone_number" VARCHAR(100) NULL DEFAULT NULL,
+	"photo" IMAGE(2147483647) NULL DEFAULT NULL,
+	PRIMARY KEY ("member_id")
+);
+
+-- Data exporting was unselected.
+-- Dumping structure for table LibraryDB.Return_Book
+CREATE TABLE IF NOT EXISTS "Return_Book" (
+	"return_id" INT(10,0) NOT NULL,
+	"book_id" INT(10,0) NULL DEFAULT NULL,
+	"issue_id" INT(10,0) NULL DEFAULT NULL,
+	"member_id" INT(10,0) NULL DEFAULT NULL,
+	"issue_date" DATE(0) NULL DEFAULT NULL,
+	"due_date" DATE(0) NULL DEFAULT NULL,
+	"submit_date" DATE(0) NULL DEFAULT NULL,
+	"fine" DECIMAL(18,0) NULL DEFAULT NULL,
+	"fine_paid" VARBINARY(10) NULL DEFAULT NULL,
+	PRIMARY KEY ("return_id")
+);
+
+-- Data exporting was unselected.
+-- Dumping structure for table LibraryDB.Type
+CREATE TABLE IF NOT EXISTS "Type" (
+	"id" INT(10,0) NOT NULL,
+	"type" VARCHAR(50) NULL DEFAULT NULL,
+	PRIMARY KEY ("id")
+);
+
+-- Data exporting was unselected.
+-- Dumping structure for table LibraryDB.User_Detail
+CREATE TABLE IF NOT EXISTS "User_Detail" (
+	"user_name" VARCHAR(100) NOT NULL,
+	"password" VARCHAR(5000) NULL DEFAULT NULL,
+	"name" VARCHAR(50) NULL DEFAULT NULL,
+	"address" VARCHAR(50) NULL DEFAULT NULL,
+	"phone_number" VARCHAR(50) NULL DEFAULT NULL,
+	"email" VARCHAR(50) NULL DEFAULT NULL,
+	"type" VARCHAR(50) NULL DEFAULT NULL,
+	PRIMARY KEY ("user_name")
+);
+
+-- Data exporting was unselected.
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

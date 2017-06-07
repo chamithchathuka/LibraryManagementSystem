@@ -27,13 +27,14 @@ namespace Library_Management_System
         private BookController bookController;
         private MemberController memberContoller;
         private double finePerDay;
+        private double total;
         
        
       
         public ReturnBook()
         {
             InitializeComponent();
-
+            total = 0;
             dp_returndate.SelectedDate =   DateTime.Now;
             finePerDay = 10;
             issueContoller = new IssueContoller();
@@ -85,12 +86,11 @@ namespace Library_Management_System
             DateTime returnDate = (DateTime)dp_returndate.SelectedDate;
 
             if (returnDate > dateDue) {
-
-                
+                               
                 double noOfDays = (returnDate - dateDue).TotalDays;
                 MessageBox.Show("Delayed return of a book");
-
-                lbl_fine.Content = noOfDays*finePerDay;
+                total += noOfDays * finePerDay;
+                lbl_fine.Content = total;
 
             }
 
@@ -124,23 +124,6 @@ namespace Library_Management_System
         {
 
 
-            //Issue_Detail issueDetail = dataGrid.SelectedItem as Issue_Detail;
-            //int bookId = (int)issueDetail.book_id;
-
-            //bookDetail = bookController.findByBookID(bookId);
-
-            //lbl_book_id_replace.Content = bookDetail.book_id;
-            //lbl_book_name_replace.Content = bookDetail.title;
-            //lbl_book_publisher_replace.Content = bookDetail.publisher;
-            //lbl_edition_replace.Content = bookDetail.year;
-            //lbl_isbn_replace.Content = bookDetail.isbn;
-            //lbl_availablility_replace.Content = bookDetail.no_of_copies;
-            //lbl_cat_replace.Content = bookDetail.category;
-
-           // MessageBox.Show("changed");
-
-
-
         }
 
         private void btn_check_member_Click_1(object sender, RoutedEventArgs e)
@@ -161,22 +144,18 @@ namespace Library_Management_System
                 if (parseResult)
                 {
                     Member_Detail memberDetail = memberContoller.findMemberById(memberid);
-
-             
+                                 
                     if (memberDetail != null)
                     {
                         lbl_member_id.Content = memberDetail.member_id;
                         lbl_student_name.Content = memberDetail.first_name + " " + memberDetail.last_name;
                         lbl_phone_number.Content = memberDetail.phone_number;
-
-
+                        
                         List<Issue_Detail> issueDetails = issueContoller.getReturnBookDetail(memberid);
                         
-
                         if (issueDetails.Count > 0)
                         {
-
-                            
+                                                       
                             dataGrid.ItemsSource = issueContoller.getReturnBookDetail(memberid);
                             Console.WriteLine("Returned book count " + issueDetails.Count);
                         }
@@ -196,6 +175,11 @@ namespace Library_Management_System
 
             }
 
+        }
+
+        private void btn_complete_checkout_Click(object sender, RoutedEventArgs e)
+        {
+                       
         }
     }
 }

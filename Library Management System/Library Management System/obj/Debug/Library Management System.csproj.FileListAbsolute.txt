@@ -110,3 +110,31 @@ C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management Sys
 C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Library Management System.csproj.GenerateResource.Cache
 C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Library Management System.exe
 C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Library Management System.pdb
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\itextsharp.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\itextsharp.xml
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\system.windows.controls.input.toolkit.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\WPFToolkit.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\system.windows.controls.input.toolkit.pdb
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\WPFToolkit.pdb
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\log4net.dll
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\bin\Debug\log4net.xml
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\MemberQuickView.g.cs
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\MemberQuickView.baml
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Book Quick View.g.cs
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Book Quick View.baml

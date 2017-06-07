@@ -51,6 +51,9 @@ namespace Library_Management_System.controller
             return status;
         }
 
+
+
+
         public Member_Detail findMemberById(int id)
         {
             Member_Detail memberDetail = null;
@@ -101,6 +104,7 @@ namespace Library_Management_System.controller
                        .Where(b => b.dob == dob)
                        .ToList();
                     }
+
                     if (constraint == "add_number")
                     {
 
@@ -140,6 +144,25 @@ namespace Library_Management_System.controller
             return memberDetails;
         }
 
+        public List<Member_Detail> loadAllMembers()
+        {
+            List<Member_Detail> memberDetails = null;
+
+            try
+            {
+                using (var db = new ModelDB())
+                {
+
+                    memberDetails = db.Set<Member_Detail>().ToList();
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException);
+            }
+            return memberDetails;
+        }
 
     }
 }

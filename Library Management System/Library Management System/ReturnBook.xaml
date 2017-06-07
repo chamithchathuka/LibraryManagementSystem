@@ -9,7 +9,6 @@
         WindowStartupLocation="CenterScreen"
         Title="Return Books" Height="500" Width="800">
     <Grid>
-        <Image x:Name="book_detail" HorizontalAlignment="Left" Height="136" Margin="471,151,0,0" VerticalAlignment="Top" Width="158"/>
         <Grid HorizontalAlignment="Left"  x:Name="memberdetail_column"  Height="169" Margin="491,21,0,0" VerticalAlignment="Top" Width="283" Background="#FFF7F7F7">
             <Label x:Name="lbl_member_id" Content="Student_ID" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="153,41,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="lbl_member_heading" Content="Member Details" HorizontalContentAlignment="Center" Margin="0,10,10,0" VerticalAlignment="Top"/>
@@ -19,7 +18,6 @@
         </Grid>
         <Grid HorizontalAlignment="Left" Height="252" Margin="394,208,0,0" VerticalAlignment="Top" Width="380" Background="#FFF7F7F7">
             <Label x:Name="lbl_book_detail" Content="Book Detail" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,9,-1,0"/>
-            <Image x:Name="book_detail_Copy" HorizontalAlignment="Left" Height="136" Margin="10,72,0,0" VerticalAlignment="Top" Width="158"/>
             <Label x:Name="lbl_book_id" Content="Book_ID" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="180,40,0,0" VerticalAlignment="Top" Width="87"/>
             <Label x:Name="lbl_book_id_replace" Content="Book_ID" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,40,0,0" VerticalAlignment="Top" Width="87"/>
             <Label x:Name="lbl_edition" Content="Edition" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="180,134,0,0" VerticalAlignment="Top" Width="87"/>
@@ -34,6 +32,7 @@
             <Label x:Name="lbl_isbn_replace" Content="ISBN" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,169,0,0" VerticalAlignment="Top" Width="87"/>
             <Label x:Name="lbl_isbn" Content="ISBN" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="180,169,0,0" VerticalAlignment="Top" Width="87"/>
             <Label x:Name="lbl_edition_replace" Content="Edition" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,134,0,0" VerticalAlignment="Top" Width="87"/>
+            <Image x:Name="book_detail" HorizontalAlignment="Left" Height="128" Margin="10,67,0,0" VerticalAlignment="Top" Width="158"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="169" Margin="90,21,0,0" VerticalAlignment="Top" Width="370" Background="#FFF7F7F7">
             <Grid.ColumnDefinitions>
@@ -46,7 +45,7 @@
             <DatePicker x:Name="dp_returndate" HorizontalAlignment="Left" Margin="99,69,0,0" VerticalAlignment="Top" Width="132"/>
             <Label x:Name="lbl_returndate" Content="Return Date" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="77"/>
             <Label x:Name="lbl_fine" Content="Fine" HorizontalAlignment="Left" Margin="274,103,0,0" VerticalAlignment="Top" FontSize="24"/>
-            <Button x:Name="btn_complete_checkout" Content="Check out" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="253,71,0,0"/>
+            <Button x:Name="btn_complete_checkout" Content="Check out" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="253,71,0,0" Click="btn_complete_checkout_Click"/>
         </Grid>
         <DataGrid x:Name="dataGrid"   IsReadOnly="True" AutoGenerateColumns="False" Margin="90,208,416.6,10.4" SelectionChanged="selectionChanged">
             <DataGrid.Columns>

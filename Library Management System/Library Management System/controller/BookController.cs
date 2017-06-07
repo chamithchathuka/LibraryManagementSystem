@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.Migrations;
+using System.Windows.Input;
 
 namespace Library_Management_System.controller
 {
@@ -108,6 +109,8 @@ namespace Library_Management_System.controller
             return bookDetail;
         }
 
+        
+
 
         public Book_Detail findByISBN(string isbn)
         {
@@ -157,6 +160,7 @@ namespace Library_Management_System.controller
                     }
                     if (constraint == "title")
                     {
+                        Console.WriteLine("Search by Title "+term);
                         bookDetails = db.Book_Detail
                        .Where(b => b.title == term)
                        .ToList();
@@ -210,6 +214,86 @@ namespace Library_Management_System.controller
             }
             return status;
        }
+
+
+        public List<Book_Detail> searchAny(string searchText)
+        {
+            Boolean status = false;
+            List<Book_Detail> books = null;
+
+            try
+            {
+                using (var db = new ModelDB())
+                {
+                    return books = (from book in db.Book_Detail
+                            let type = book.GetType()
+                            let typesearch = searchText.GetType()
+                            let properties = type.GetProperties()
+                            where (from pro in properties
+                                   where pro.PropertyType == typesearch
+                                   select pro.GetValue(book, null)
+                                    into value
+                                   select value as string).Any(val => val != null && val == searchText)
+                            select book).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("search exception book " + ex.InnerException);
+            }
+            return books;
+        }
+
+        public List<string> loadText()
+        {
+           
+            List<string> books = null;
+
+            try
+            {
+                using (var db = new ModelDB())
+                {
+                    var query = from bk in db.Book_Detail select new { bk.title };
+
+                    books = (from Book_Detail b in books
+                             select b.ToString()).ToList();
+
+                //    books = query.ToList<string>();
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("search exception book " + ex.InnerException);
+            }
+
+            foreach (var title in books) {
+
+                Console.Write("book titles  " + title);
+            }
+
+            return books;
+        }
+
+        public List<Book_Detail> loadAllBooks()
+        {
+            List<Book_Detail> books = null;
+
+            try
+            {
+                using (var db = new ModelDB())
+                {
+
+                    books = db.Set<Book_Detail>().ToList();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException);
+            }
+            return books;
+        }
 
     }
 }

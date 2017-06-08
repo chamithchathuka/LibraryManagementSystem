@@ -34,11 +34,12 @@
         <Label x:Name="lbl_member_id" Content="Member ID" Margin="85,26,133.4,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Height="29"/>
         <TextBox x:Name="txt_member_id" HorizontalAlignment="Left" Height="26" Margin="222,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Grid.ColumnSpan="2" IsEnabled="false"/>
         <TextBox x:Name="txt_address" TabIndex="5" HorizontalAlignment="Left" Height="26" Margin="222,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Grid.ColumnSpan="2"/>
-        <Button Margin="26,26,259.4,414.4" Background="{x:Null}" Click="Button_Click">
+        <Button Margin="10,26,254.4,391.4" Background="{x:Null}" Click="Button_Click">
             <StackPanel Orientation ="Horizontal">
-                <Image Source="images/Back-26.png" Stretch="Uniform" Height="26" Width="18"/>
+                <Image Source="image/back.png" Stretch="Uniform" Height="27" Width="32"/>
             </StackPanel>
         </Button>
+        <Image x:Name="member_image" HorizontalAlignment="Left" Height="100" Margin="85,294,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>

@@ -9,13 +9,15 @@
         PreviewKeyDown="Window_PreviewKeyDown"
         Title="MainWindow" Height="343.204" Width="468.932">
     <Grid>
-        <TextBox x:Name="txt_username" TabIndex="1" HorizontalAlignment="Left" Height="23" Margin="156,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" ToolTip="User Name"/>
-        <Label x:Name="lbl_username" Content="User Name" HorizontalAlignment="Left" Margin="61,81,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_password" Content="Password" HorizontalAlignment="Left" Margin="61,135,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_username" TabIndex="1" HorizontalAlignment="Left" Height="23" Margin="156,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" ToolTip="User Name"/>
+        <Label x:Name="lbl_username" Content="User Name" HorizontalAlignment="Left" Margin="61,110,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_password" Content="Password" HorizontalAlignment="Left" Margin="61,164,0,0" VerticalAlignment="Top"/>
 
         <Button x:Name="btn_exit" TabIndex="4"  Content="Exit" HorizontalAlignment="Left" Margin="61,223,0,0" VerticalAlignment="Top" Width="140" Height="45" Click="btn_exit_Click"/>
         <Button x:Name="btn_login" Content="Login"  TabIndex="3" HorizontalAlignment="Left" Margin="275,223,0,0" VerticalAlignment="Top" Width="140" Height="45" Click="btn_login_Click"/>
-        <PasswordBox x:Name="txt_password" TabIndex="2"  HorizontalAlignment="Left" Margin="156,138,0,0" VerticalAlignment="Top" Width="259" Height="23"/>
+        <PasswordBox x:Name="txt_password" TabIndex="2"  HorizontalAlignment="Left" Margin="156,167,0,0" VerticalAlignment="Top" Width="259" Height="23"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Source="image/login.png" Height="49" Margin="61,39,0,0" VerticalAlignment="Top" Width="41"/>
+        <Label x:Name="label" Content="Login" HorizontalAlignment="Left"  FontSize="21.333" FontFamily="Segoe UI Semibold"  Margin="107,39,0,0" VerticalAlignment="Top" Height="49" Width="71"/>
 
     </Grid>
 </Window>

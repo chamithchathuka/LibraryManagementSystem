@@ -12,7 +12,7 @@
         <Grid HorizontalAlignment="Left"  x:Name="memberdetail_column"  Height="169" Margin="491,21,0,0" VerticalAlignment="Top" Width="283" Background="#FFF7F7F7">
             <Label x:Name="lbl_member_id" Content="Student_ID" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="153,41,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="lbl_member_heading" Content="Member Details" HorizontalContentAlignment="Center" Margin="0,10,10,0" VerticalAlignment="Top"/>
-            <Image x:Name="image" HorizontalAlignment="Left" Height="113" Margin="10,41,0,0" VerticalAlignment="Top" Width="120"/>
+            <Image x:Name="image_member" HorizontalAlignment="Left" Height="113" Margin="10,41,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="lbl_student_name" Content="Student_Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="153,88,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="lbl_phone_number" Content="Phone_Number" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="153,128,0,0" VerticalAlignment="Top" Width="120"/>
         </Grid>

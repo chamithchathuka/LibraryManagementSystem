@@ -31,7 +31,7 @@
         <Label x:Name="lbl_book_total_count" Content="" HorizontalAlignment="Left" Margin="623,45,0,0" VerticalAlignment="Top" Width="32"/>
         <Label x:Name="lbl_member_total_count" Content="" HorizontalAlignment="Left" Margin="623,83,0,0" VerticalAlignment="Top" Width="32"/>
         <Button x:Name="btn_get_issued_books" Content="Get Issued Books of Member" HorizontalAlignment="Left" Margin="45,129,0,0" VerticalAlignment="Top" Width="174" Height="28" Click="btn_get_issued_books_Click"/>
-        <Button x:Name="btn_get_members_borrowed" Content="Get Unreturned books of member" HorizontalAlignment="Left" Margin="350,127,0,0" VerticalAlignment="Top" Width="212" Height="28" Click="btn_get_members_borrowed_Click"/>
+        <Button x:Name="btn_get_members_borrowed" Content="Get Unreturned books of member" HorizontalAlignment="Left" Margin="427,127,0,0" VerticalAlignment="Top" Width="212" Height="28" Click="btn_get_members_borrowed_Click"/>
         <DatePicker x:Name="dp_date_selected"   HorizontalAlignment="Left" Margin="234,130,0,0" VerticalAlignment="Top"/>
 
 

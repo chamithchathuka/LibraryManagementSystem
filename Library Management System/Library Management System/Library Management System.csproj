@@ -157,6 +157,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MemberQuickView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -273,7 +277,29 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="image\1.png" />
+    <Resource Include="image\10.png" />
+    <Resource Include="image\2.png" />
+    <Resource Include="image\3.png" />
+    <Resource Include="image\4.png" />
+    <Resource Include="image\5.png" />
+    <Resource Include="image\6.png" />
+    <Resource Include="image\7.png" />
+    <Resource Include="image\9.png" />
+    <Resource Include="image\bookshelf.png" />
+    <Resource Include="image\bookshelf_color.png" />
+    <Resource Include="image\library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\book_ir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\login.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

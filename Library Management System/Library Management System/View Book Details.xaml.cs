@@ -45,8 +45,14 @@ namespace Library_Management_System
             txt_price.Text = bookDetail.price + "";
             txt_publisher.Text = bookDetail.publisher;
             txt_year.Text = bookDetail.year;
-            BitmapImage image = ToImage(bookDetail.image);
-            image_view.Source = image;
+
+            if (bookDetail.image != null) {
+                BitmapImage image = ToImage(bookDetail.image);
+                image_view.Source = image;
+            }
+
+            
+           
            
         }
 

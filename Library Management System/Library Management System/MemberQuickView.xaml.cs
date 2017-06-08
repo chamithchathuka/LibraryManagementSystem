@@ -45,5 +45,21 @@ namespace Library_Management_System
 
 
         }
+
+        public BitmapImage ToImage(byte[] array)
+        {
+            var image = new BitmapImage();
+            using (var ms = new System.IO.MemoryStream(array))
+            {
+
+                image.BeginInit();
+                image.CacheOption = BitmapCacheOption.OnLoad; 
+                image.StreamSource = ms;
+                image.EndInit();
+
+            }
+            return image;
+        }
+
     }
 }

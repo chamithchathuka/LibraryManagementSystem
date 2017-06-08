@@ -22,6 +22,13 @@ namespace Library_Management_System
         public Home()
         {
             InitializeComponent();
+            
+        }
+        public Home(User_Detail userDetail)
+        {
+            InitializeComponent();
+            lbl_username.Content = "Logged in as :"+userDetail.name;
+
         }
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)

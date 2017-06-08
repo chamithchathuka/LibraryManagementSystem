@@ -43,6 +43,14 @@ namespace Library_Management_System
             {
                 btn_addmember_Click(sender, e);
             }
+            if (e.Key == Key.Enter)
+            {
+                this.Close();
+                new Home().Show();
+
+            }
+
+
         }
 
 
@@ -109,5 +117,7 @@ namespace Library_Management_System
             Hide();
             new Home().Show();
         }
+
+
     }
 }

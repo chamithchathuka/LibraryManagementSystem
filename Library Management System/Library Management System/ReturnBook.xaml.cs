@@ -150,6 +150,13 @@ namespace Library_Management_System
                         lbl_member_id.Content = memberDetail.member_id;
                         lbl_student_name.Content = memberDetail.first_name + " " + memberDetail.last_name;
                         lbl_phone_number.Content = memberDetail.phone_number;
+
+                        if (memberDetail.photo!=null) {
+
+                            byte[] imageByte = memberDetail.photo;
+                            BitmapImage mem_image = ToImage(imageByte);
+                            image_member.Source = mem_image;
+                        }
                         
                         List<Issue_Detail> issueDetails = issueContoller.getReturnBookDetail(memberid);
                         
@@ -176,6 +183,22 @@ namespace Library_Management_System
             }
 
         }
+
+        public BitmapImage ToImage(byte[] array)
+        {
+            var image = new BitmapImage();
+            using (var ms = new System.IO.MemoryStream(array))
+            {
+
+                image.BeginInit();
+                image.CacheOption = BitmapCacheOption.OnLoad; // here
+                image.StreamSource = ms;
+                image.EndInit();
+
+            }
+            return image;
+        }
+
 
         private void btn_complete_checkout_Click(object sender, RoutedEventArgs e)
         {

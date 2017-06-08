@@ -5,21 +5,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
+        
         PreviewKeyDown="Window_PreviewKeyDown"
         WindowStartupLocation="CenterScreen"
         Title="Home" Height="500" Width="800">
+
     <Grid Margin="-2,0,2,0">
-        <Button x:Name="btn_explorer" TabIndex="1" Content="Explore Books" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,39,0,0" Click="btn_explorer_Click"/>
-        <Button x:Name="btn_bk_detail"  TabIndex="2" Content="Book Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,80,0,0" Click="btn_details_Click"/>
-        <Button x:Name="btn_issue_return" Content="Issue / Return Book" TabIndex="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,120,0,0" Click="btn_issue_return_Click"/>
-        <Button x:Name="btn_issue" TabIndex="4" Content="Issue Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,160,0,0"/>
-        <Button x:Name="btn_managebooks" TabIndex="6" Content="Manage Books" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,240,0,0" Click="btn_return_Click" />
-        <Button x:Name="btn_manage_members" TabIndex="7" Content="Manage Members" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,280,0,0" Click="btn_manage_members_Click"/>
-        <Button x:Name="btn_return_detail" TabIndex="5" Content="Return Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,200,0,0" Click="btn_return_detail_Click"/>
-        <Button x:Name="btn_book_categories" TabIndex="8" Content="Book Categories" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,320,0,0"/>
-        <Button x:Name="btn_book_language" TabIndex="9" Content="Book languages" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="24,360,0,0"/>
-        <Button x:Name="btn_help" Content="Help" TabIndex="10" HorizontalAlignment="Left" Width="155" Margin="24,400,0,0" Height="40" VerticalAlignment="Top"/>
-        <Button x:Name="btn_settigs" Content="Settings" HorizontalAlignment="Left" Margin="676,39,0,0" VerticalAlignment="Top" Width="89" Height="40" Click="btn_settigs_Click"/>
+        <Button x:Name="btn_explorer" TabIndex="1" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="323" Margin="67,106,0,0" Click="btn_explorer_Click" Background="#FFEDF9AB"/>
+        <Button x:Name="btn_bk_detail"  TabIndex="2" HorizontalContentAlignment="Left" Content="  2. Book Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="576,84,0,0" Click="btn_details_Click"/>
+        <Button x:Name="btn_issue_return" HorizontalContentAlignment="Left" TabIndex="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="323" Margin="231,106,0,0" Click="btn_issue_return_Click" Background="#FFFDF7BE"/>
+        <Button x:Name="btn_issue" TabIndex="4" HorizontalContentAlignment="Left" Content="  4. Issue Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="498,124,0,0"/>
+        <Button x:Name="btn_managebooks" TabIndex="6" HorizontalContentAlignment="Left" Content="  5. Manage Books" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="498,204,0,0" Click="btn_return_Click" />
+        <Button x:Name="btn_manage_members" TabIndex="7" HorizontalContentAlignment="Left" Content="  6. Manage Members" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="498,244,0,0" Click="btn_manage_members_Click"/>
+        <Button x:Name="btn_return_detail" TabIndex="5" HorizontalContentAlignment="Left" Content="  7. Return Details" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="498,164,0,0" Click="btn_return_detail_Click"/>
+        <Button x:Name="btn_book_categories" TabIndex="8" HorizontalContentAlignment="Left"  Content="  8. Book Categories" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="498,284,0,0"/>
+        <Button x:Name="btn_book_language" TabIndex="9" HorizontalContentAlignment="Left"  Content="  9. Book languages" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="40" Margin="498,324,0,0"/>
+        <Button x:Name="btn_help" Content="  10. Help" HorizontalContentAlignment="Left" TabIndex="10" HorizontalAlignment="Left" Width="155" Margin="498,364,0,0" Height="40" VerticalAlignment="Top"/>
+        <Button x:Name="btn_settigs" Content="  11. Settings" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="670,170,0,0" VerticalAlignment="Top" Width="89" Height="40" Click="btn_settigs_Click"/>
+        <Image x:Name="img_no_1" HorizontalAlignment="Left" Height="33" Margin="132,244,0,0" VerticalAlignment="Top" Width="32" Source="image/1.png"/>
+        <Image x:Name="img_1_explore" Source="image/library.png" HorizontalAlignment="Left" Height="100" Margin="98,124,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="label" Content="Bookshelf - Library Management System" HorizontalAlignment="Left" Margin="132,24,0,0" VerticalAlignment="Top" FontSize="21.333" FontFamily="Segoe UI Semibold" Width="465" Height="51"/>
+        <Image x:Name="image2" Source="image/bookshelf.png" HorizontalAlignment="Left" Height="51" Margin="67,24,0,0" VerticalAlignment="Top" Width="51"/>
+        <Image x:Name="img_no_2" HorizontalAlignment="Left" Height="33" Margin="295,244,0,0" VerticalAlignment="Top" Width="32" Source="image/2.png"/>
+        <Label x:Name="lbl_Issue" Content="Issue - Return" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Semibold" FontSize="18.667" Margin="232,296,404.6,42.4" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.064"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Image x:Name="image_ir" Source="image/book_ir.png" HorizontalAlignment="Left" Height="100" Margin="261,124,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="lbl_sub_explore" HorizontalContentAlignment="Center" Content="Books and Members" Margin="67,340,567.6,66.4"/>
+        <Label x:Name="lbl_sub_ir" HorizontalContentAlignment="Center" Content="Issue or Return Book" Margin="231,340,403.6,73.4"/>
+        <Button x:Name="btn_issue_return_Copy" HorizontalContentAlignment="Left" TabIndex="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="323" Margin="395,106,0,0" Click="btn_issue_return_Click" Background="#FFFDF7BE"/>
+        <Image x:Name="img_no_2_Copy" HorizontalAlignment="Left" Height="33" Margin="459,244,0,0" VerticalAlignment="Top" Width="32" Source="image/2.png"/>
+        <Label x:Name="lbl_Issue_Copy" Content="Issue - Return" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Semibold" FontSize="18.667" Margin="396,296,240.6,42.4" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.064"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Image x:Name="image_ir_Copy" Source="image/book_ir.png" HorizontalAlignment="Left" Height="100" Margin="425,124,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="lbl_sub_ir_Copy" HorizontalContentAlignment="Center" Content="Issue or Return Book" Margin="395,340,239.6,73.4"/>
+        <Label x:Name="lbl_explore" Content="Explore" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Semibold" FontSize="18.667" Margin="68,297,568.6,41.4" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.064"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="lbl_username" Content="User Name" HorizontalAlignment="Left" Margin="693,34,0,0" VerticalAlignment="Top"/>
 
     </Grid>
+
+
+
 </Window>
+    
+   

@@ -21,9 +21,6 @@ using System.Windows.Shapes;
 
 namespace Library_Management_System
 {
-    /// <summary>
-    /// Interaction logic for Explore_book.xaml
-    /// </summary>
     public partial class Explore_book : Window
     {
         BookController bookController ;
@@ -47,17 +44,7 @@ namespace Library_Management_System
             btn_get_members_borrowed.Visibility = Visibility.Hidden;
             dp_date_selected.Visibility = Visibility.Hidden;
 
-            //List<string> texts = new List<string>();
-            //texts.Add("Amara");
-            //texts.Add("Amal");
-            //texts.Add("Nimal");
-            //texts.Add("Saman");
-            //texts.Add("Binka");
-            //texts.Add("Chamith");
-            //texts.Add("Toshi");
-            //Console.Write("book Count" + texts.Count);
-            //autocomplete_searchbox.ItemsSource = texts;
-            //bContoller.loadText();
+   
         }
 
        
@@ -119,8 +106,7 @@ namespace Library_Management_System
                 btn_get_issued_books.Visibility = Visibility.Visible;
                 btn_get_members_borrowed.Visibility = Visibility.Visible;
                 dp_date_selected.Visibility = Visibility.Visible;
-                //MessageBox.Show("member radio checked");
-
+            
                 members  = memberController.loadAllMembers();
 
                 lbl_book_total_count.Content = members.Count;
@@ -144,8 +130,6 @@ namespace Library_Management_System
             if (radio_btn_book.IsChecked == true)
             {
 
-         
-                // MessageBox.Show("book radio checked");
                 books = bookController.loadAllBooks();
                 data_book_grid.ItemsSource = books;
                 lbl_book_total_count.Content = books.Count;

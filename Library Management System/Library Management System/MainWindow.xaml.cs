@@ -46,7 +46,8 @@ namespace Library_Management_System
             if (result)
             {
                 this.Hide();
-                Home home = new Home();
+                
+                Home home = new Home(username);
                 home.ShowDialog();
             }
             else {

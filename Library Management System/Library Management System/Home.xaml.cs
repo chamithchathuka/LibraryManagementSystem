@@ -24,10 +24,10 @@ namespace Library_Management_System
             InitializeComponent();
             
         }
-        public Home(User_Detail userDetail)
+        public Home(string username)
         {
             InitializeComponent();
-            lbl_username.Content = "Logged in as :"+userDetail.name;
+            lbl_username.Content = "Logged in as : "+username;
 
         }
 
@@ -97,7 +97,10 @@ namespace Library_Management_System
             mb.Show();
         }
 
-       
-       
+        private void btn_signout_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            new MainWindow().Show();
+        }
     }
 }

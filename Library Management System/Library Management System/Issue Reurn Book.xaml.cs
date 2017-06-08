@@ -113,6 +113,12 @@ namespace Library_Management_System
                         lbl_student_name.Content = member_detail.first_name + " " + member_detail.last_name;
                         lbl_phone_number.Content = member_detail.phone_number;
                         txt_bookid.Focus();
+                        if (member_detail.photo != null) {
+
+                            //image_member
+
+                        }
+
                     }
                     else
                     {

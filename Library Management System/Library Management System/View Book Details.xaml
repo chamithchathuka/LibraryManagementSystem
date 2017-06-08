@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="View Books" Height="500" Width="800">
     <Grid>
         <Button x:Name="btn_clear" Content="Clear" HorizontalAlignment="Left" Margin="437,406,0,0" VerticalAlignment="Top" Width="90" Height="40"/>
@@ -18,7 +19,7 @@
         <Label x:Name="lbl_language" Content="Language" HorizontalAlignment="Left" Margin="79,324,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_price" Content="Price" HorizontalAlignment="Left" Margin="442,321,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_booktype" Content="Book Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,367,0,0" RenderTransformOrigin="0.542,2.077"/>
-        <Label x:Name="lbl_booknumber" Content="Book Number" HorizontalAlignment="Left" Margin="442,109,0,0" VerticalAlignment="Top" Height="33"/>
+        <Label x:Name="lbl_booknumber" Content="Book Number" HorizontalAlignment="Left" Margin="442,109,0,0"  VerticalAlignment="Top" Height="33"/>
         <TextBox x:Name="txt_bookid" HorizontalAlignment="Left" Height="23" Margin="577,27,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165" IsEnabled="false"/>
         <TextBox x:Name="txt_isbn" HorizontalAlignment="Left" Height="23" Margin="576,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" IsEnabled="False" />
         <TextBox x:Name="txt_title" HorizontalAlignment="Left" Margin="176,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="212" Foreground="#FF1D1717" IsEnabled="False" />
@@ -31,15 +32,15 @@
         <Button x:Name="btn_edit" Content="Edit" HorizontalAlignment="Left" Margin="548,406,0,0" VerticalAlignment="Top" Width="90" Height="40"/>
         <Button x:Name="btn_addbooktype" Content="+" HorizontalAlignment="Left" Margin="362,371,0,0" VerticalAlignment="Top" Width="26" Height="22" IsEnabled="False" />
         <Button x:Name="btn_addlanguage" Content="+&#xD;&#xA;`" HorizontalAlignment="Left" Margin="362,325,0,0" VerticalAlignment="Top" Width="26" Height="22" RenderTransformOrigin="3.565,0.201" IsEnabled="False" />
-        <TextBox x:Name="txt_price" HorizontalAlignment="Left" Height="23" Margin="577,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="txt_price" IsEnabled="False"   HorizontalAlignment="Left" Height="23" Margin="577,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
         <Button x:Name="btn_next_book" Content="Next Book" HorizontalAlignment="Left" Margin="654,406,0,0" VerticalAlignment="Top" Width="90" Height="40" />
         <Label x:Name="lbl_numberofpages" Content="No of Pages" HorizontalAlignment="Left" Margin="79,413,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txt_no_of_pages" HorizontalAlignment="Left" Height="23" Margin="176,411,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165" IsEnabled="False" />
         <Label x:Name="lbl_yearx" Content="Edition" HorizontalAlignment="Left" Margin="442,269,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.352,0.719"/>
-        <TextBox x:Name="txt_year" HorizontalAlignment="Left" Height="23" Margin="575,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="txt_year" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="575,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
         <Label x:Name="lbl_no_of_copies" Content="No of Copies" HorizontalAlignment="Left" Margin="442,367,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.352,0.719"/>
-        <TextBox x:Name="txt_no_of_copies" HorizontalAlignment="Left" Height="23" Margin="576,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="105" Margin="176,27,0,0" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="txt_no_of_copies" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="576,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <Image x:Name="image_view" HorizontalAlignment="Left" Height="105" Margin="176,27,0,0" VerticalAlignment="Top" Width="105"/>
         <ComboBox x:Name="cmb_languages" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" Width="165" Margin="176,324,0,0"/>
 
     </Grid>

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.Entity.Migrations;
+using Microsoft.Win32;
+using System.IO;
 
 namespace Library_Management_System
 {
@@ -24,14 +26,15 @@ namespace Library_Management_System
     {
         Book_Detail bk = null;
         Boolean isNewBookAdded = false;
+        BitmapImage image ;
+
         controller.BookController bkcontoller = new controller.BookController();
         public Add_Book()
         {
 
             InitializeComponent();
             bk = new Book_Detail();
-            
-            
+                       
             bkcontoller.addBook(bk);
 
             txt_bookid.Text = "BKID"+bk.book_id.ToString();
@@ -116,6 +119,8 @@ namespace Library_Management_System
             bk.price = price;
             bk.description = description;
             bk.no_of_copies = noofCopies;
+            bk.image=(imageToByteArray(image));
+
 
             isNewBookAdded  = bkcontoller.updateBook(bk);
             Console.Write("is book added" + isNewBookAdded);
@@ -131,5 +136,34 @@ namespace Library_Management_System
             this.Close();
             new Add_Book().Show();
         }
+
+        private void btn_chooseimage_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Select a picture";
+            op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+              "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+              "Portable Network Graphic (*.png)|*.png";
+            if (op.ShowDialog() == true)
+            {
+                image = new BitmapImage(new Uri(op.FileName));
+                image_view.Source = image;
+            }
+
+        }
+
+        public byte[] imageToByteArray(BitmapImage imageIn)
+        {
+            byte[] data;
+            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(imageIn));
+            using (MemoryStream ms = new MemoryStream())
+            {
+                encoder.Save(ms);
+               return data = ms.ToArray();
+            }
+        }
+
+ 
     }
 }

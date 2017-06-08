@@ -43,6 +43,9 @@ namespace Library_Management_System
 
             dp_date_selected.SelectedDate = DateTime.Now;
 
+            btn_get_issued_books.Visibility = Visibility.Hidden;
+            btn_get_members_borrowed.Visibility = Visibility.Hidden;
+            dp_date_selected.Visibility = Visibility.Hidden;
 
             //List<string> texts = new List<string>();
             //texts.Add("Amara");
@@ -112,12 +115,18 @@ namespace Library_Management_System
         {
             if (radio_btn_member.IsChecked == true)
             {
+
+                btn_get_issued_books.Visibility = Visibility.Visible;
+                btn_get_members_borrowed.Visibility = Visibility.Visible;
+                dp_date_selected.Visibility = Visibility.Visible;
                 //MessageBox.Show("member radio checked");
 
                 members  = memberController.loadAllMembers();
 
                 lbl_book_total_count.Content = members.Count;
                 data_book_grid.ItemsSource = members;
+
+                
 
                 cmb_field.Items.Clear();
                 cmb_field.Items.Add("first_name");
@@ -166,12 +175,13 @@ namespace Library_Management_System
              
                 bk =(Book_Detail) data_book_grid.SelectedItem;
                 new View_Book_Details(bk.book_id).Show();
-                MessageBox.Show(bk.title);
+               
 
             }
             if (member.GetType().Equals(item.GetType()) == true)
             {
-                MessageBox.Show("Member data type ");
+                member =(Member_Detail) data_book_grid.SelectedItem;
+                new MemberQuickView(member.member_id).Show();
 
             }
             if (issue.GetType().Equals(item.GetType()) == true)
@@ -204,8 +214,6 @@ namespace Library_Management_System
             FileStream fs = new FileStream(filename, FileMode.Create, FileAccess.Write, FileShare.None);
             Document doc = new Document();
            
-                      
-
             if (radio_btn_member.IsChecked == true)
             {
                 Boolean headingsDone = false;
@@ -265,38 +273,27 @@ namespace Library_Management_System
 
             doc.Close();
 
-
-            //PdfPTable pdfTable = new PdfPTable(5);
-
-
-            //var rows = GetDataGridRows(data_book_grid);
-            //foreach (DataGridRow r in rows)
-            //{
-            //    DataRowView rv = (DataRowView)r.Item;
-            //    foreach (DataGridColumn column in data_book_grid.Columns)
-            //    {
-
-
-            //        if (column.GetCellContent(r) is TextBlock)
-            //        {
-            //            TextBlock cellContent = column.GetCellContent(r) as TextBlock;
-            //            pdfTable.AddCell(cellContent.Text);
-            //        }
-            //    }
-            //}
-
-            //    doc.Add(pdfTable);
-
-
-
-
         }
 
         private void btn_get_issued_books_Click(object sender, RoutedEventArgs e)
         {
             DateTime dateSelcted = (DateTime)dp_date_selected.SelectedDate;
-            List<Issue_Detail> issues = issueController.getDelayedIssuesForDate(dateSelcted);
+            string memberid = txt_search.Text.Trim();
+            int memID;
 
+            int.TryParse(memberid, out memID);
+            List<Issue_Detail> issues = issueController.getIssuesforMember(memID);
+            data_book_grid.ItemsSource = issues;
+        }
+
+        private void btn_get_members_borrowed_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime dateSelcted = (DateTime)dp_date_selected.SelectedDate;
+            string memberid = txt_search.Text.Trim();
+            int memID;
+
+            int.TryParse(memberid,out memID);
+            List<Issue_Detail> issues = issueController.getDelayedBooksForMember(memID ,dateSelcted);
             data_book_grid.ItemsSource = issues;
         }
     }

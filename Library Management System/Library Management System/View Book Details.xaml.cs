@@ -45,10 +45,24 @@ namespace Library_Management_System
             txt_price.Text = bookDetail.price + "";
             txt_publisher.Text = bookDetail.publisher;
             txt_year.Text = bookDetail.year;
-            
-            
+            BitmapImage image = ToImage(bookDetail.image);
+            image_view.Source = image;
+           
+        }
 
-
+        public BitmapImage ToImage(byte[] array)
+        {
+            var image = new BitmapImage();
+            using (var ms = new System.IO.MemoryStream(array))
+            {
+                
+                image.BeginInit();
+                image.CacheOption = BitmapCacheOption.OnLoad; // here
+                image.StreamSource = ms;
+                image.EndInit();
+                
+            }
+            return image;
         }
 
 

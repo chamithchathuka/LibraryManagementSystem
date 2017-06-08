@@ -15,8 +15,8 @@
         <TextBox x:Name="txt_search" HorizontalAlignment="Left" Height="23" Margin="196,42,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="262"/>
         <Label x:Name="lbl_field" Content="Field" HorizontalAlignment="Left" Margin="143,80,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cmb_field" HorizontalAlignment="Left" Margin="196,83,0,0" VerticalAlignment="Top" Width="262"/>
-        <Button x:Name="btn_search" Content="Search" HorizontalAlignment="Left" Margin="680,41,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.506,0.335" Height="67" Click="btn_search_Click"/>
-        <Button x:Name="btn_export" Content="PDF" HorizontalAlignment="Left" Margin="680,138,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.506,0.335" Height="26" Click="btn_export_Click"/>
+        <Button x:Name="btn_search" Content="Search" HorizontalAlignment="Left" Margin="680,32,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.506,0.335" Height="67" Click="btn_search_Click"/>
+        <Button x:Name="btn_export" Content="PDF" HorizontalAlignment="Left" Margin="680,129,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.506,0.335" Height="26" Click="btn_export_Click"/>
         <DataGrid x:Name="data_book_grid" Margin="45,169,44.6,0" VerticalAlignment="Top" Height="266" IsReadOnly="True"  ItemsSource="{Binding Data Source\=CC\\SQLEXPRESS;Initial Catalog\=LibraryDB;Integrated Security\=True}">
             <DataGrid.ItemContainerStyle>
                 <Style TargetType="DataGridRow">
@@ -25,14 +25,14 @@
             </DataGrid.ItemContainerStyle>
         </DataGrid>
         <RadioButton x:Name="radio_btn_member" Content="Member" Checked="radio_btn_book_Checked"  GroupName="search_group" HorizontalAlignment="Left" Margin="45,84,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radio_btn_book" Content="Book" Checked="radio_btn_book_Checked"  GroupName="search_group" HorizontalAlignment="Left" Margin="45,45,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radio_btn_book" Content="Book" Checked="radio_btn_book_Checked"  GroupName="search_group" HorizontalAlignment="Left" Margin="45,53,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_book_total" Content="Total Book Count" HorizontalAlignment="Left" Margin="463,42,0,0" VerticalAlignment="Top" Width="130" Height="29"/>
         <Label x:Name="lbl_member_total" Content="Total Member Count" HorizontalAlignment="Left" Margin="463,80,0,0" VerticalAlignment="Top" Width="130"/>
-        <Label x:Name="lbl_book_total_count" Content="" HorizontalAlignment="Left" Margin="623,45,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_member_total_count" Content="" HorizontalAlignment="Left" Margin="623,83,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_book_total_count" Content="" HorizontalAlignment="Left" Margin="623,45,0,0" VerticalAlignment="Top" Width="32"/>
+        <Label x:Name="lbl_member_total_count" Content="" HorizontalAlignment="Left" Margin="623,83,0,0" VerticalAlignment="Top" Width="32"/>
         <Button x:Name="btn_get_issued_books" Content="Get Issued Books of Member" HorizontalAlignment="Left" Margin="45,129,0,0" VerticalAlignment="Top" Width="174" Height="28" Click="btn_get_issued_books_Click"/>
-        <Button x:Name="btn_get_members_borrowed" Content="Get Unreturned books of member" HorizontalAlignment="Left" Margin="381,129,0,0" VerticalAlignment="Top" Width="177" Height="28"/>
-        <DatePicker x:Name="dp_date_selected"   HorizontalAlignment="Left" Margin="246,131,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_get_members_borrowed" Content="Get Unreturned books of member" HorizontalAlignment="Left" Margin="350,127,0,0" VerticalAlignment="Top" Width="212" Height="28" Click="btn_get_members_borrowed_Click"/>
+        <DatePicker x:Name="dp_date_selected"   HorizontalAlignment="Left" Margin="234,130,0,0" VerticalAlignment="Top"/>
 
 
         <!--<Controls:AutoCompleteBox x:Name="autocomplete_searchbox" HorizontalAlignment="Left" Margin="332,18,0,0" VerticalAlignment="Top" Width="262"/>-->

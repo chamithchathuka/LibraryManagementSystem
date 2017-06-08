@@ -26,14 +26,14 @@
 
         <TextBox x:Name="txt_isbn" TabIndex="2" HorizontalAlignment="Left" Height="30" Margin="176,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212"/>
         <TextBox x:Name="txt_title" TabIndex="3" HorizontalAlignment="Left" Margin="176,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="212" Foreground="#FF1D1717"></TextBox>
-        <TextBox x:Name="txt_author" TabIndex="11" HorizontalAlignment="Left" Height="23" Margin="576,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="txt_author" TabIndex="11" HorizontalAlignment="Left" Height="23" Margin="576,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" IsEnabled="False"/>
         <TextBox x:Name="txt_description" TabIndex="4" HorizontalAlignment="Left"  Margin="176,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="212" ToolTip="description"/>
         <TextBox x:Name="txt_publisher" TabIndex="5"  HorizontalAlignment="Left" Height="23" Margin="176,284,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="212"/>
         <ComboBox x:Name="cmb_category" TabIndex="12" HorizontalAlignment="Left" Margin="576,221,0,0" VerticalAlignment="Top" Width="165"/>
         <ComboBox x:Name="cmb_booktype" TabIndex="7" HorizontalAlignment="Left" Margin="176,371,0,0" VerticalAlignment="Top" Width="165"/>
         <TextBox x:Name="txt_booknumber" TabIndex="10" HorizontalAlignment="Left" Height="30" Margin="577,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
         <Button x:Name="btn_edit" Content="Edit" HorizontalAlignment="Left" Margin="548,406,0,0" VerticalAlignment="Top" Width="90" Height="40"/>
-        <Button x:Name="btn_chooseimage" TabIndex="9" Content="Choose Image" HorizontalAlignment="Left" Margin="581,44,0,0" VerticalAlignment="Top" Width="163" Height="23"/>
+        <Button x:Name="btn_chooseimage" TabIndex="9" Content="Choose Image" HorizontalAlignment="Left" Margin="581,44,0,0" VerticalAlignment="Top" Width="163" Height="23" Click="btn_chooseimage_Click"/>
         <Button x:Name="btn_addbooktype" Content="+" HorizontalAlignment="Left" Margin="362,371,0,0" VerticalAlignment="Top" Width="26" Height="22"/>
         <Button x:Name="btn_addlanguage" Content="+&#xD;&#xA;`" HorizontalAlignment="Left" Margin="362,325,0,0" VerticalAlignment="Top" Width="26" Height="22" RenderTransformOrigin="3.565,0.201"/>
         <TextBox x:Name="txt_price" TabIndex="14" HorizontalAlignment="Left" Height="23" Margin="577,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
@@ -45,6 +45,7 @@
         <Label x:Name="lbl_no_of_copies" Content="No of Copies" HorizontalAlignment="Left" Margin="444,363,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.352,0.719"/>
         <TextBox x:Name="txt_no_of_copies" TabIndex="15" HorizontalAlignment="Left" Height="23" Margin="577,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
         <ComboBox x:Name="cmb_languages" TabIndex="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="165" Margin="176,324,0,0"/>
+        <Image x:Name="image_view" HorizontalAlignment="Left" Height="100" Margin="393,29,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>

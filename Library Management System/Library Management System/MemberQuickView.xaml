@@ -12,13 +12,13 @@
             <ColumnDefinition Width="163*"/>
         </Grid.ColumnDefinitions>
         <TextBox x:Name="txt_firstname" TabIndex="1" HorizontalAlignment="Left" Height="24" Margin="18,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txt_lastname" TabIndex='2' HorizontalAlignment="Left" Height="26" Margin="291.6,67,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Grid.Column="1"/>
-        <DatePicker x:Name ="dpdob" TabIndex="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26.4,165,0,0" Width="140" Height="24" Grid.Column="1"/>
-        <TextBox x:Name="txt_email" TabIndex="7" HorizontalAlignment="Left" Height="21" Margin="81,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txt_phonenumber" TabIndex="6" MaxLength="10" HorizontalAlignment="Left" Height="26" Margin="291.6,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Grid.Column="1"/>
+        <TextBox x:Name="txt_lastname" TabIndex='2' HorizontalAlignment="Left" Height="26" Margin="26.4,165,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Grid.Column="1"/>
+        <DatePicker x:Name ="dpdob" TabIndex="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26.4,201,0,0" Width="136" Height="26" Grid.Column="1"/>
+        <TextBox x:Name="txt_phonenumber" TabIndex="6" MaxLength="10" HorizontalAlignment="Left" Height="26" Margin="18,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Grid.ColumnSpan="2"/>
         <TextBox x:Name="txt_admissionnumber" TabIndex="4" HorizontalAlignment="Left" Height="26" Margin="291.6,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Grid.Column="1"/>
-       
-        <TextBox x:Name="txt_member_id" HorizontalAlignment="Left" Height="21" Margin="26.4,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" IsEnabled="false" Grid.Column="1"/>
-        <TextBox x:Name="txt_address" TabIndex="5" HorizontalAlignment="Left" Height="21" Margin="18,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Grid.ColumnSpan="2"/>
-        </Grid>
+
+        <TextBox x:Name="txt_member_id" HorizontalAlignment="Left" Height="21" Margin="78,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" IsEnabled="false" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txt_address" TabIndex="5" HorizontalAlignment="Left" Height="21" Margin="18,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" Grid.ColumnSpan="2"/>
+        <Image x:Name="image" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="114" Margin="78,10,0,0" VerticalAlignment="Top" Width="140"/>
+    </Grid>
 </Window>

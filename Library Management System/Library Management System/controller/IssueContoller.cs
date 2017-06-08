@@ -166,10 +166,9 @@ namespace Library_Management_System.controller
             return issueBookDetail;
         }
 
-
-        public List<Issue_Detail> getDelayedBooksForMember(string memberId,DateTime dateSelected)
+        public List<Issue_Detail> getIssuesforMember(int memberId)
         {
-          
+
             List<Issue_Detail> issueBookDetail = null;
             Console.WriteLine("over due report called");
             try
@@ -178,7 +177,31 @@ namespace Library_Management_System.controller
                 {
 
                     issueBookDetail = db.Issue_Detail
-                    .Where(issuebook => issuebook.return_date == null & (issuebook.due_date < dateSelected & issuebook.member_id.Equals(memberId)))
+                     .Where(issuebook => issuebook.member_id == memberId).ToList();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("get return book details " + ex.InnerException);
+            }
+            return issueBookDetail;
+        }
+
+
+        public List<Issue_Detail> getDelayedBooksForMember(int memberId,DateTime dateSelected)
+        {
+          
+            List<Issue_Detail> issueBookDetail = null;
+            Console.WriteLine("over due report for member called");
+            try
+            {
+                using (var db = new ModelDB())
+                {
+
+                    issueBookDetail = db.Issue_Detail
+                    .Where(issuebook => issuebook.return_date == null & (issuebook.due_date < dateSelected & issuebook.member_id == memberId))
                     .ToList();
                 }
 

@@ -7,32 +7,34 @@
         mc:Ignorable="d"
         PreviewKeyDown="Window_PreviewKeyDown"
         WindowStartupLocation="CenterScreen"
-        Title="Issue / Return Books" Height="500" Width="800">
+        Title="Issue Books" Height="500" Width="800">
     <Grid>
         <Image x:Name="book_detail" HorizontalAlignment="Left" Height="136" Margin="471,151,0,0" VerticalAlignment="Top" Width="158"/>
         <Grid HorizontalAlignment="Left"  x:Name="memberdetail_column"  Height="312" Margin="90,148,0,0" VerticalAlignment="Top" Width="194" Background="#FFF7F7F7">
             <Label x:Name="lbl_member_id" Content="Student_ID" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="40,189,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="lbl_member_heading" Content="Member Details" HorizontalContentAlignment="Center" Margin="0,10,10,0" VerticalAlignment="Top"/>
             <Image x:Name="image_member" HorizontalAlignment="Left" Height="113" Margin="40,57,0,0" VerticalAlignment="Top" Width="120"/>
-            <Label x:Name="lbl_student_name" Content="Student_Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="35,231,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lbl_student_name" Content="Student_Name" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top" Width="174" FontSize="16" FontFamily="Segoe UI Semibold"/>
             <Label x:Name="lbl_phone_number" Content="Phone_Number" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="35,276,0,0" VerticalAlignment="Top" Width="120"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="312" Margin="328,148,0,0" VerticalAlignment="Top" Width="433" Background="#FFF7F7F7">
             <Label x:Name="lbl_book_detail" Content="Book Detail" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
-            <Image x:Name="image_book" HorizontalAlignment="Left" Height="136" Margin="135,41,0,0" VerticalAlignment="Top" Width="158"/>
+            <Image x:Name="image_book" HorizontalAlignment="Left" Height="136" Margin="10,10,0,0" VerticalAlignment="Top" Width="158"/>
             <Label x:Name="lbl_book_id" Content="Book_ID" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Width="87"/>
             <Label x:Name="lbl_book_id_replace" Content="Book_ID" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="116,214,0,0" VerticalAlignment="Top" Width="87"/>
             <Label x:Name="lbl_edition" Content="Edition" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="222,217,0,0" VerticalAlignment="Top" Width="87"/>
-            <Label x:Name="lbl_book_name" Content="Book_Name" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="87"/>
-            <Label x:Name="lbl_book_name_replace" Content="Book_Name" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="116,245,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_book_name_replace" Content="Book_Name" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Width="413" Height="57" FontSize="18.667" FontFamily="Segoe UI Semibold"/>
             <Label x:Name="lbl_availablility" Content="No of Copies " HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="222,245,0,0" VerticalAlignment="Top" Width="87"/>
             <Label x:Name="lbl_availablility_replace" Content="Availability" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="318,245,0,0" VerticalAlignment="Top" Width="87"/>
-            <Label x:Name="lbl_book_name_Copy" Content="Publisher" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="10,276,0,0" VerticalAlignment="Top" Width="87"/>
-            <Label x:Name="lbl_book_publisher_replace" Content="Publisher" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="116,276,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_book_name_Copy" Content="Publisher" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="87"/>
+            <Label x:Name="lbl_book_publisher_replace" Content="Publisher" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="10,276,0,0" VerticalAlignment="Top" Width="193"/>
             <Label x:Name="lbl_category" Content="Category" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="222,276,0,0" VerticalAlignment="Top" Width="87"/>
             <Label x:Name="lbl_cat_replace" Content="Caegory Replace" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="318,276,0,0" VerticalAlignment="Top" Width="87"/>
             <Label x:Name="lbl_isbn_replace" Content="ISBN" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="318,214,0,0" VerticalAlignment="Top" Width="87"/>
-            <Button x:Name="btn_add" Content="Add to Bucket" HorizontalAlignment="Left" Margin="318,41,0,0" VerticalAlignment="Top" Width="105" Click="btn_add_Click"/>
+            <Button x:Name="btn_add" Content="Add to Bag" HorizontalAlignment="Left" Margin="318,41,0,0" VerticalAlignment="Top" Width="105" Click="btn_add_Click"/>
+            <Label x:Name="lbl_bookcount" Content="0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="335,106,0,0" VerticalAlignment="Top" Height="44" FontSize="16" Width="70" FontFamily="Segoe UI Semibold"/>
+            <Label x:Name="label_bag_title" HorizontalContentAlignment="Center" Content="Number of items in the bag" HorizontalAlignment="Left" Margin="248,71,0,0" VerticalAlignment="Top" Width="175"/>
+            <Image x:Name="image" Source="image/bag.png" HorizontalAlignment="Left" Height="44" Margin="253,106,0,0" VerticalAlignment="Top" Width="42"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="110" Margin="90,21,0,0" VerticalAlignment="Top" Width="671" Background="#FFF7F7F7">
             <Grid.ColumnDefinitions>
@@ -50,7 +52,6 @@
             <Label x:Name="lbl_returndate" Content="Return Date" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="90"/>
             <DatePicker x:Name="datepicker_returndate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="181,74,0,0" Width="160"/>
             <Label x:Name="lbl_issuedate" Content="Issue Date" HorizontalAlignment="Left" Margin="355,75,0,0" VerticalAlignment="Top" Height="26" Width="75"/>
-            <Label x:Name="lbl_bookcount" Content="Bucket" HorizontalAlignment="Left" Margin="433,46,0,0" VerticalAlignment="Top" Height="28"/>
             <ComboBox x:Name="cmb_returnda_selector" HorizontalAlignment="Left" Margin="100,75,0,0" VerticalAlignment="Top" Width="73"/>
         </Grid>
 

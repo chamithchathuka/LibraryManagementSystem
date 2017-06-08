@@ -66,6 +66,18 @@ namespace Library_Management_System
             }
         }
 
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                this.Close();
+                new Home().Show();
+
+            }
+
+
+        }
+
         private void Window_Closed(object sender, EventArgs e)
         {
             if (!isNewBookAdded)

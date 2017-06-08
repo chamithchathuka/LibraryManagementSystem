@@ -47,41 +47,70 @@ namespace Library_Management_System
    
         }
 
-       
+
         private void btn_search_Click(object sender, RoutedEventArgs e)
         {
 
             string parameter = (string)cmb_field.SelectedValue;
-            
+
             if (!txt_search.Text.Trim().Equals(""))
             {
-                List<Book_Detail> searchList = bookController.searchBooks(parameter, txt_search.Text.Trim(), DateTime.Now);
 
-                if (searchList != null)
+                if (radio_btn_book.IsChecked == true)
                 {
-                    if (searchList.Count > 0)
+                    List<Book_Detail> searchList = bookController.searchBooks(parameter, txt_search.Text.Trim(), DateTime.Now);
+
+                    if (searchList != null)
                     {
-                        data_book_grid.ItemsSource = searchList;
+                        if (searchList.Count > 0)
+                        {
+                            data_book_grid.ItemsSource = searchList;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No books available for the given criteria");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("No books available for the given criteria");
+                        MessageBox.Show("no database record found");
                     }
                 }
-                else {
-                    MessageBox.Show("no database record found");
-                }
+                if (radio_btn_member.IsChecked == true)
+                {
 
+                    List<Member_Detail> searchList = memberController.searchMember(parameter, txt_search.Text.Trim(), DateTime.Now);
+
+                    if (searchList != null)
+                    {
+                        if (searchList.Count > 0)
+                        {
+                            data_book_grid.ItemsSource = searchList;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No Member available for the given criteria");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("no database record found");
+                    }
+
+
+
+                }
             }
             else
             {
-              
+
                 MessageBox.Show("Search box is Empty");
 
             }
 
 
-        }
+            }
+        
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
@@ -116,7 +145,7 @@ namespace Library_Management_System
             
                 members  = memberController.loadAllMembers();
 
-                lbl_book_total_count.Content = members.Count;
+                lbl_member_total_count.Content = members.Count;
                 data_book_grid.ItemsSource = members;
                                
 
@@ -176,7 +205,8 @@ namespace Library_Management_System
             }
             if (issue.GetType().Equals(item.GetType()) == true)
             {
-                MessageBox.Show("Issue data type ");
+                issue = (Issue_Detail)data_book_grid.SelectedItem;
+                
             }
 
             

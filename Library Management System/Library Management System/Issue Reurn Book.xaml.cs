@@ -118,6 +118,12 @@ namespace Library_Management_System
                             BitmapImage image = Convertor.ToImage(member_detail.photo);
                             image_member.Source = image;
                         }
+                        else
+                        {
+                            image_member.Source = new BitmapImage(new Uri(@"image/profile3.jpg", UriKind.Relative));
+
+                        }
+
 
                     }
                     else
@@ -156,6 +162,24 @@ namespace Library_Management_System
 
                         if (bk_detail.no_of_copies == 0)
                         {
+                            
+                            lbl_book_id_replace.Content = bk_detail.book_id;
+                            lbl_book_name_replace.Content = bk_detail.title;
+                            lbl_book_publisher_replace.Content = bk_detail.publisher;
+                            lbl_isbn_replace.Content = bk_detail.isbn;
+                            lbl_availablility_replace.Content = bk_detail.no_of_copies;
+                            lbl_cat_replace.Content = bk_detail.category;
+
+                            if (bk_detail.image != null)
+                            {
+                                BitmapImage image = Convertor.ToImage(bk_detail.image);
+                                image_book.Source = image;
+                            }
+                            else
+                            {
+                                image_book.Source = new BitmapImage(new Uri(@"image/profile3.jpg", UriKind.Relative));
+                            }
+
                             MessageBox.Show("Sorry! Copies not available now");
                         } else {
                             lbl_book_id_replace.Content = bk_detail.book_id;
@@ -168,8 +192,13 @@ namespace Library_Management_System
                             if (bk_detail.image != null)
                             {
                                 BitmapImage image = Convertor.ToImage(bk_detail.image);
-                                image_member.Source = image;
+                                image_book.Source = image;
                             }
+                            else
+                            {
+                                image_book.Source = new BitmapImage(new Uri(@"image/profile3.jpg", UriKind.Relative));
+                            }
+
                         }
 
                     }
@@ -188,17 +217,26 @@ namespace Library_Management_System
         {
             DateTime returnDate = datepicker_returndate.SelectedDate.Value;
             DateTime issueDate = datepicker_issuedate.SelectedDate.Value;
-
+            int count = 0;
             if (bookBasket.Count > 0) {
                 Console.WriteLine("Count size "+bookBasket.Count);
                 foreach (Book_Detail book in bookBasket)
                 {
-                    issueController.issueBook(book, member_detail, issueDate, returnDate);
+                    count++;
+                 issueController.issueBook(book, member_detail, issueDate, returnDate);
                 }
                 txt_memberid.Text = "";
                 txt_bookid.Text = "";
                 txt_memberid.Focus();
 
+            }
+            if (count == bookBasket.Count)
+            {
+                MessageBox.Show("Issue Process Successful");
+            }
+            else {
+
+                MessageBox.Show("Problem of issueing books");
             }
         }
 

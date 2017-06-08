@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         PreviewKeyDown="Window_PreviewKeyDown"
-        Title="MainWindow" Height="343.204" Width="468.932">
+        Title="Login" Height="343.204" Width="468.932">
     <Grid>
         <TextBox x:Name="txt_username" TabIndex="1" HorizontalAlignment="Left" Height="23" Margin="156,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" ToolTip="User Name"/>
         <Label x:Name="lbl_username" Content="User Name" HorizontalAlignment="Left" Margin="61,110,0,0" VerticalAlignment="Top"/>

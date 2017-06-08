@@ -74,7 +74,7 @@ namespace Library_Management_System.controller
             return memberDetail;
         }
 
-        public List<Member_Detail> searchMember(string constraint, string term, DateTime dob, string phonenumber,string addmission)
+        public List<Member_Detail> searchMember(string constraint, string term, DateTime dob)
         {
             List<Member_Detail> memberDetails = null;
 
@@ -109,7 +109,7 @@ namespace Library_Management_System.controller
                     {
 
                         memberDetails = db.Member_Detail
-                       .Where(b => b.admission_number == addmission)
+                       .Where(b => b.admission_number == term)
                        .ToList();
                     }
                     if (constraint == "email")
@@ -130,7 +130,7 @@ namespace Library_Management_System.controller
                     {
 
                         memberDetails = db.Member_Detail
-                       .Where(b => b.phone_number == phonenumber)
+                       .Where(b => b.phone_number == term)
                        .ToList();
                     }
 

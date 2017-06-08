@@ -32,7 +32,7 @@
             <Label x:Name="lbl_isbn_replace" Content="ISBN" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,169,0,0" VerticalAlignment="Top" Width="87"/>
             <Label x:Name="lbl_isbn" Content="ISBN" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="180,169,0,0" VerticalAlignment="Top" Width="87"/>
             <Label x:Name="lbl_edition_replace" Content="Edition" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="276,134,0,0" VerticalAlignment="Top" Width="87"/>
-            <Image x:Name="book_detail" HorizontalAlignment="Left" Height="128" Margin="10,67,0,0" VerticalAlignment="Top" Width="158"/>
+            <Image x:Name="image_book_detail" HorizontalAlignment="Left" Height="128" Margin="10,67,0,0" VerticalAlignment="Top" Width="158"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="169" Margin="90,21,0,0" VerticalAlignment="Top" Width="370" Background="#FFF7F7F7">
             <Grid.ColumnDefinitions>
@@ -44,8 +44,9 @@
             <Button x:Name="btn_check_member" Content="Search" HorizontalAlignment="Left" Margin="252,22,0,0" VerticalAlignment="Top" Width="100" Height="23" Click="btn_check_member_Click_1"  />
             <DatePicker x:Name="dp_returndate" HorizontalAlignment="Left" Margin="99,69,0,0" VerticalAlignment="Top" Width="132"/>
             <Label x:Name="lbl_returndate" Content="Return Date" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="77"/>
-            <Label x:Name="lbl_fine" Content="Fine" HorizontalAlignment="Left" Margin="274,103,0,0" VerticalAlignment="Top" FontSize="24"/>
+            <Label x:Name="lbl_fine" Content="0" HorizontalAlignment="Left" Margin="293,103,0,0" VerticalAlignment="Top" FontSize="24"/>
             <Button x:Name="btn_complete_checkout" Content="Check out" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="253,71,0,0" Click="btn_complete_checkout_Click"/>
+            <Label x:Name="label" Content="Fine" HorizontalAlignment="Left" Margin="191,106,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="21.333"/>
         </Grid>
         <DataGrid x:Name="dataGrid"   IsReadOnly="True" AutoGenerateColumns="False" Margin="90,208,416.6,10.4" SelectionChanged="selectionChanged">
             <DataGrid.Columns>
@@ -54,11 +55,16 @@
                 <DataGridTemplateColumn  Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Name="b1"  Click="button_click"></Button>
+                            <Button Name="b1"  Content="Return" Click="button_click"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
+            <DataGrid.ItemContainerStyle>
+            <Style TargetType="DataGridRow">
+                <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+            </Style>
+            </DataGrid.ItemContainerStyle>
         </DataGrid>
     </Grid>
 </Window>

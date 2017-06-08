@@ -40,8 +40,8 @@ namespace Library_Management_System
             txt_firstname.Text =  member.first_name;
             txt_lastname.Text = member.last_name;
             txt_phonenumber.Text = member.phone_number;
-            txt_phonenumber.Text = member.phone_number;
             txt_address.Text = member.address;
+         
             dpdob.SelectedDate = member.dob;
             txt_member_id.Text = member.member_id+"";
 

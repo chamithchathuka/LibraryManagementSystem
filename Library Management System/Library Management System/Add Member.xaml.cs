@@ -60,7 +60,7 @@ namespace Library_Management_System
         private void btn_addmember_Click(object sender, RoutedEventArgs e)
         {
             string firstName = txt_firstname.Text.Trim();
-            string lastName = txt_firstname.Text;
+            string lastName = txt_lastname.Text;
             DateTime? dob = null;
             try
             {

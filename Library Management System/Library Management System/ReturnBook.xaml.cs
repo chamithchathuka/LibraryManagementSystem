@@ -1,4 +1,5 @@
 ﻿using Library_Management_System.controller;
+using Library_Management_System.Util;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -49,6 +50,42 @@ namespace Library_Management_System
         private void btn_check_member_Click(object sender, RoutedEventArgs e)
         {
        
+
+        }
+
+        private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var item = dataGrid.SelectedItem;
+            Book_Detail bk = new Book_Detail();
+            Member_Detail member = new Member_Detail();
+            Issue_Detail issue = new Issue_Detail();
+
+            
+            if (issue.GetType().Equals(item.GetType()) == true)
+            {
+              
+                issue = (Issue_Detail)dataGrid.SelectedItem;
+                bk = bookController.findByBookID((int)issue.book_id);
+                if (!bk.title.Equals("")) {
+                    lbl_availablility_replace.Content = bk.no_of_copies;
+                    lbl_book_name_replace.Content = bk.title;
+                    lbl_book_publisher_replace.Content = bk.publisher;
+                    lbl_cat_replace.Content = bk.category;
+                    lbl_isbn_replace.Content = bk.isbn;
+
+                    if (bk.image != null)
+                    {
+                        BitmapImage image = Convertor.ToImage(bk.image);
+                        image_book_detail.Source = image;
+                    }
+                    else
+                    {
+                        image_book_detail.Source = new BitmapImage(new Uri(@"image/profile3.jpg", UriKind.Relative));
+                    }
+
+                }
+
+            }
 
         }
 
@@ -107,7 +144,7 @@ namespace Library_Management_System
                    dataGrid.ItemsSource = issueContoller.getReturnBookDetail(memberid);
                     Console.WriteLine("Returned book count "+issueDetails.Count);
                 } else {
-                    MessageBox.Show("No books to retuen for the current user");
+                    MessageBox.Show("No books to return for the current user");
                 }
 
             }
@@ -151,13 +188,21 @@ namespace Library_Management_System
                         lbl_student_name.Content = memberDetail.first_name + " " + memberDetail.last_name;
                         lbl_phone_number.Content = memberDetail.phone_number;
 
-                        if (memberDetail.photo!=null) {
+                        if (memberDetail.photo != null)
+                        {
 
                             byte[] imageByte = memberDetail.photo;
                             BitmapImage mem_image = ToImage(imageByte);
                             image_member.Source = mem_image;
                         }
-                        
+                       
+                              else {
+                                image_member.Source = new BitmapImage(new Uri(@"image/profile3.jpg", UriKind.Relative));
+                            }
+
+
+                       
+
                         List<Issue_Detail> issueDetails = issueContoller.getReturnBookDetail(memberid);
                         
                         if (issueDetails.Count > 0)
@@ -168,7 +213,7 @@ namespace Library_Management_System
                         }
                         else
                         {
-                            MessageBox.Show("No books to retuen for the current user");
+                            MessageBox.Show("No books to Return for the current user");
                         }
                     }
                     else {

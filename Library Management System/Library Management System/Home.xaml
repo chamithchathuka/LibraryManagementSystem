@@ -13,7 +13,7 @@
     <Grid Margin="-2,0,2,0">
         <Button x:Name="btn_explorer" TabIndex="1" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="341" Margin="67,106,0,0" Click="btn_explorer_Click" Background="#FFEDF9AB"/>
         <Button x:Name="btn_issue_return" HorizontalContentAlignment="Left" TabIndex="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="340" Margin="233,106,0,0" Click="btn_issue_return_Click" Background="#FFFDF7BE"/>
-        <Button x:Name="btn_managebooks" TabIndex="6" HorizontalContentAlignment="Left" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="174" Margin="572,266,0,0" Background="#FFFDF7BE" Click="btn_managebooks_Click"/>
+        <Button x:Name="btn_managebooks" TabIndex="6" HorizontalContentAlignment="Left" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="180" Margin="572,266,0,0" Background="#FFFDF7BE" Click="btn_managebooks_Click"/>
         <Button x:Name="btn_manage_members" TabIndex="7" HorizontalContentAlignment="Left"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="154" Margin="572,106,0,0" Click="btn_manage_members_Click" Background="#FFE1EA99"/>
         <Button x:Name="btn_help" HorizontalContentAlignment="Left" TabIndex="10" HorizontalAlignment="Left" Width="78" Margin="704,5,0,0" Height="40" VerticalAlignment="Top" Background="White"/>
         <Button x:Name="btn_settigs"  HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="544,5,0,0" VerticalAlignment="Top" Width="155" Height="40" Click="btn_settigs_Click" Background="White">
@@ -22,7 +22,7 @@
         <Image x:Name="img_no_1" HorizontalAlignment="Left" Height="33" Margin="132,244,0,0" VerticalAlignment="Top" Width="32" Source="image/1.png"/>
         <Image x:Name="img_1_explore" Source="image/search.png" HorizontalAlignment="Left" Height="100" Margin="98,124,0,0" VerticalAlignment="Top" Width="100"/>
         <Label x:Name="label" Content="Bookshelf - Library Management System" HorizontalAlignment="Left" Margin="159,48,0,0" VerticalAlignment="Top" FontSize="21.333" FontFamily="Segoe UI Semibold" Width="465" Height="51"/>
-        <Image x:Name="image2" Source="image/bookshelf.png" HorizontalAlignment="Left" Height="55" Margin="73,44,0,0" VerticalAlignment="Top" Width="51"/>
+        <Image x:Name="image2" Source="image/bookshelf_color.png" HorizontalAlignment="Left" Height="55" Margin="73,44,0,0" VerticalAlignment="Top" Width="51"/>
         <Image x:Name="img_no_2" HorizontalAlignment="Left" Height="33" Margin="297,244,0,0" VerticalAlignment="Top" Width="40" Source="image/2.png"/>
         <Label x:Name="lbl_Issue" Content="Issue" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Semibold" FontSize="18.5" Margin="235,297,404.6,131.4" >
             <Label.RenderTransform>
@@ -58,7 +58,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lbl_username" HorizontalContentAlignment="Right" Content="User Name" HorizontalAlignment="Left" Margin="651,58,0,0" VerticalAlignment="Top" Width="96"/>
+        <Label x:Name="lbl_username" HorizontalContentAlignment="Right" Content="User Name" HorizontalAlignment="Left" Margin="595,57,0,0" VerticalAlignment="Top" Width="147"/>
         <Label x:Name="lbl_managebooks" Content="Manage Resources" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Semibold" FontSize="15" Margin="573,387,63.6,39.4" >
             <Label.RenderTransform>
                 <TransformGroup>
@@ -74,7 +74,7 @@
         <Label x:Name="lbl_sub_issues" HorizontalContentAlignment="Center" Content="Issue and Return Details" Margin="67,377,567.6,60.4"/>
         <Label x:Name="lbl_help" Content="Help" HorizontalAlignment="Left" Margin="737,12,0,0" VerticalAlignment="Top"/>
         <Image x:Name="image_help"  HorizontalAlignment="Left" Height="24" Source="image/help.png" VerticalAlignment="Top" Width="25" Margin="707,12,0,0"/>
-        <Button x:Name="btn_managebooks_Copy" TabIndex="6" HorizontalContentAlignment="Left" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="333" Margin="402,106,0,0" Click="btn_return_Click" Background="#FFE1EA99"/>
+        <Button x:Name="btn_managebooks_Copy" TabIndex="6" HorizontalContentAlignment="Left" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="340" Margin="402,106,0,0" Click="btn_return_Click" Background="#FFE1EA99"/>
         <Label x:Name="lbl_return" Content="Return" HorizontalContentAlignment="Center" RenderTransformOrigin="0.519,0.85" FontFamily="Segoe UI Semibold" FontSize="18.5" Margin="402,296,234.6,134.4" >
             <Label.RenderTransform>
                 <TransformGroup>

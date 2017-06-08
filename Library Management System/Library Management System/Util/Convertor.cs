@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace Library_Management_System.Util
 {
     class Convertor
     {
-        public BitmapImage ToImage(byte[] array)
+        public static  BitmapImage ToImage(byte[] array)
         {
             var image = new BitmapImage();
             using (var ms = new System.IO.MemoryStream(array))
@@ -22,6 +23,18 @@ namespace Library_Management_System.Util
 
             }
             return image;
+        }
+
+        public static byte[] imageToByteArray(BitmapImage imageIn)
+        {
+            byte[] data;
+            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(imageIn));
+            using (MemoryStream ms = new MemoryStream())
+            {
+                encoder.Save(ms);
+                return data = ms.ToArray();
+            }
         }
     }
 }

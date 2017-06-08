@@ -119,6 +119,8 @@ namespace Library_Management_System
             bk.price = price;
             bk.description = description;
             bk.no_of_copies = noofCopies;
+
+            if(image!=null)
             bk.image=(imageToByteArray(image));
 
 

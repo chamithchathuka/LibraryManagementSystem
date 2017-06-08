@@ -147,6 +147,7 @@
     <Compile Include="ReturnBook.xaml.cs">
       <DependentUpon>ReturnBook.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Util\Convertor.cs" />
     <Compile Include="Util\EncryptionUtil.cs" />
     <Compile Include="Util\StandardID Generator.cs" />
     <Compile Include="Validator\Member_Validator.cs" />
@@ -320,6 +321,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\profile3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\book.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

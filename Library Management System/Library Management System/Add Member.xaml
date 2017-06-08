@@ -25,7 +25,7 @@
         <TextBox x:Name="txt_phonenumber" TabIndex="6" MaxLength="10" HorizontalAlignment="Left" Height="26" Margin="291.6,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Grid.Column="1"/>
         <Label x:Name="lbl_addmissionnumber" Content="Addmission Number" HorizontalAlignment="Left" Margin="129.6,124,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.333" Width="120" Height="26" Grid.Column="1"/>
         <TextBox x:Name="txt_admissionnumber" TabIndex="4" HorizontalAlignment="Left" Height="26" Margin="291.6,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Grid.Column="1"/>
-        <Button x:Name="btn_chooseimage" Content="Upload Photo" HorizontalAlignment="Left" Margin="222,321,0,0" VerticalAlignment="Top" Width="136" Height="42" Grid.ColumnSpan="2"/>
+        <Button x:Name="btn_chooseimage" Content="Upload Photo" HorizontalAlignment="Left" Margin="222,321,0,0" VerticalAlignment="Top" Width="136" Height="42" Grid.ColumnSpan="2" Click="btn_chooseimage_Click"/>
         <Button x:Name="btn_addmember" TabIndex="8" Content="Add Member" HorizontalAlignment="Left" Margin="291.6,321,0,0" VerticalAlignment="Top" Width="136" Height="42" Grid.Column="1" Click="btn_addmember_Click" >
             <Button.Background>
                 <ImageBrush/>

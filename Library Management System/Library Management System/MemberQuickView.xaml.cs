@@ -1,4 +1,5 @@
 ﻿using Library_Management_System.controller;
+using Library_Management_System.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,24 +42,32 @@ namespace Library_Management_System
             txt_phonenumber.Text = member.phone_number;
             txt_phonenumber.Text = member.phone_number;
             txt_address.Text = member.address;
+            dpdob.SelectedDate = member.dob;
+            txt_member_id.Text = member.member_id+"";
+
+
+            if (member.photo != null)
+            {
+                image_member.Source = Convertor.ToImage(member.photo);
+
+            }
+            else {
+                image_member.Source = new BitmapImage(new Uri(@"image/profile3.jpg", UriKind.Relative));
+            }
 
 
 
         }
 
-        public BitmapImage ToImage(byte[] array)
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            var image = new BitmapImage();
-            using (var ms = new System.IO.MemoryStream(array))
+           
+            if (e.Key == Key.Escape)
             {
+                this.Close();
+           }
 
-                image.BeginInit();
-                image.CacheOption = BitmapCacheOption.OnLoad; 
-                image.StreamSource = ms;
-                image.EndInit();
 
-            }
-            return image;
         }
 
     }

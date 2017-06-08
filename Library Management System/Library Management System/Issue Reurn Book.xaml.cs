@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Collections;
+using Library_Management_System.Util;
 
 namespace Library_Management_System
 {
@@ -114,9 +115,8 @@ namespace Library_Management_System
                         lbl_phone_number.Content = member_detail.phone_number;
                         txt_bookid.Focus();
                         if (member_detail.photo != null) {
-
-                            //image_member
-
+                            BitmapImage image = Convertor.ToImage(member_detail.photo);
+                            image_member.Source = image;
                         }
 
                     }
@@ -164,6 +164,12 @@ namespace Library_Management_System
                             lbl_isbn_replace.Content = bk_detail.isbn;
                             lbl_availablility_replace.Content = bk_detail.no_of_copies;
                             lbl_cat_replace.Content = bk_detail.category;
+
+                            if (bk_detail.image != null)
+                            {
+                                BitmapImage image = Convertor.ToImage(bk_detail.image);
+                                image_member.Source = image;
+                            }
                         }
 
                     }

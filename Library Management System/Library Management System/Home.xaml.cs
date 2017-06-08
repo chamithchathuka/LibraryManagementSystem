@@ -49,9 +49,13 @@ namespace Library_Management_System
             {
                 btn_manage_members_Click(sender, e);
             }
-            if (e.Key == Key.D3)
+            if (e.Key == Key.D4)
             {
-                btn_return_Click(sender, e);
+                btn_manage_members_Click(sender, e);
+            }
+            if (e.Key == Key.D5)
+            {
+                btn_managebooks_Click(sender, e);
             }
 
 
@@ -101,6 +105,12 @@ namespace Library_Management_System
         {
             this.Close();
             new MainWindow().Show();
+        }
+
+        private void btn_managebooks_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            new Add_Book().Show();
         }
     }
 }

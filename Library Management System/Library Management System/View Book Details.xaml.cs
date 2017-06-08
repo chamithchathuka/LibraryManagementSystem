@@ -46,9 +46,14 @@ namespace Library_Management_System
             txt_publisher.Text = bookDetail.publisher;
             txt_year.Text = bookDetail.year;
 
-            if (bookDetail.image != null) {
+            if (bookDetail.image != null)
+            {
                 BitmapImage image = ToImage(bookDetail.image);
                 image_view.Source = image;
+            }
+            else {
+                image_view.Source = new BitmapImage(new Uri(@"image/book.png", UriKind.Relative));
+
             }
 
             
@@ -69,6 +74,17 @@ namespace Library_Management_System
                 
             }
             return image;
+        }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Escape)
+            {
+                this.Close();
+            }
+
+
         }
 
 

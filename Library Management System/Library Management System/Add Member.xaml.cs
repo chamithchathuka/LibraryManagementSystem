@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using FluentValidation;
+using Microsoft.Win32;
+using Library_Management_System.Util;
 
 namespace Library_Management_System
 {
@@ -26,7 +28,8 @@ namespace Library_Management_System
         MemberController mbController = new MemberController();
         private Member_Detail mb = null;
         private Boolean isNewMemberAdded = false;
-       
+        private BitmapImage image;
+
         public Add_Member()
         {
             InitializeComponent();
@@ -81,6 +84,9 @@ namespace Library_Management_System
             md.phone_number = phone;
             md.dob = dob;
 
+            if (image != null) {
+                md.photo = Convertor.imageToByteArray(image);
+            }
 
             Member_Validator validator = new Member_Validator();
             FluentValidation.Results.ValidationResult results = validator.Validate(md);
@@ -118,6 +124,18 @@ namespace Library_Management_System
             new Home().Show();
         }
 
-
+        private void btn_chooseimage_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Select a picture";
+            op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+              "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+              "Portable Network Graphic (*.png)|*.png";
+            if (op.ShowDialog() == true)
+            {
+                image = new BitmapImage(new Uri(op.FileName));
+                member_image.Source = image;
+            }
+        }
     }
 }

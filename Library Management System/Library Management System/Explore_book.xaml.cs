@@ -56,13 +56,20 @@ namespace Library_Management_System
             if (!txt_search.Text.Trim().Equals(""))
             {
                 List<Book_Detail> searchList = bookController.searchBooks(parameter, txt_search.Text.Trim(), DateTime.Now);
-                if (searchList.Count > 0)
+
+                if (searchList != null)
                 {
-                    data_book_grid.ItemsSource = searchList;
+                    if (searchList.Count > 0)
+                    {
+                        data_book_grid.ItemsSource = searchList;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No books available for the given criteria");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("No books available for the given criteria");
+                else {
+                    MessageBox.Show("no database record found");
                 }
 
             }
@@ -111,8 +118,7 @@ namespace Library_Management_System
 
                 lbl_book_total_count.Content = members.Count;
                 data_book_grid.ItemsSource = members;
-
-                
+                               
 
                 cmb_field.Items.Clear();
                 cmb_field.Items.Add("first_name");

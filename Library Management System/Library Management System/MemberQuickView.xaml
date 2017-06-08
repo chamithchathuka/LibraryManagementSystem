@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Management_System"
         mc:Ignorable="d"
+          PreviewKeyDown="Window_PreviewKeyDown"
+        WindowStartupLocation="CenterScreen"
         Title="Member Quick View" Height="300" Width="300">
     <Grid Margin="0,0,-0.4,0.4">
         <Grid.ColumnDefinitions>
@@ -17,8 +19,8 @@
         <TextBox x:Name="txt_phonenumber" TabIndex="6" MaxLength="10" HorizontalAlignment="Left" Height="26" Margin="18,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Grid.ColumnSpan="2"/>
         <TextBox x:Name="txt_admissionnumber" TabIndex="4" HorizontalAlignment="Left" Height="26" Margin="291.6,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Grid.Column="1"/>
 
-        <TextBox x:Name="txt_member_id" HorizontalAlignment="Left" Height="21" Margin="78,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" IsEnabled="false" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txt_member_id" HorizontalAlignment="Left" Height="21" Margin="87,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" IsEnabled="false" Grid.ColumnSpan="2"/>
         <TextBox x:Name="txt_address" TabIndex="5" HorizontalAlignment="Left" Height="21" Margin="18,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" Grid.ColumnSpan="2"/>
-        <Image x:Name="image" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="114" Margin="78,10,0,0" VerticalAlignment="Top" Width="140"/>
+        <Image x:Name="image_member" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="114" Margin="87,10,0,0" VerticalAlignment="Top" Width="140"/>
     </Grid>
 </Window>

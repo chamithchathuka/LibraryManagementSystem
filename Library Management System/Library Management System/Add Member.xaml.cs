@@ -43,7 +43,7 @@ namespace Library_Management_System
             {
                 btn_addmember_Click(sender, e);
             }
-            if (e.Key == Key.Enter)
+            if (e.Key == Key.Escape)
             {
                 this.Close();
                 new Home().Show();

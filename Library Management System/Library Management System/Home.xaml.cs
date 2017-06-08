@@ -35,27 +35,33 @@ namespace Library_Management_System
         {
             if (e.Key == Key.D1)
             {
-                btn_issue_return_Click(sender, e);
+                btn_explorer_Click(sender, e);
+               
             }
 
             if (e.Key == Key.D2)
             {
-                btn_return_detail_Click(sender, e);
+                btn_issue_return_Click(sender, e);
+              
             }
 
             if (e.Key == Key.D3)
             {
-                btn_explorer_Click(sender, e);
+                btn_manage_members_Click(sender, e);
             }
-        
+            if (e.Key == Key.D3)
+            {
+                btn_return_Click(sender, e);
+            }
+
 
         }
 
         private void btn_return_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            Add_Book add_book_w = new Add_Book();
-            add_book_w.Show();
+            ReturnBook mb = new ReturnBook();
+            mb.Show();
 
         }
 
@@ -82,10 +88,7 @@ namespace Library_Management_System
             ex.Show();
         }
 
-        private void btn_details_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
+     
 
         private void btn_manage_members_Click(object sender, RoutedEventArgs e)
         {
@@ -94,11 +97,7 @@ namespace Library_Management_System
             mb.Show();
         }
 
-        private void btn_return_detail_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-            ReturnBook mb = new ReturnBook();
-            mb.Show();
-        }
+       
+       
     }
 }

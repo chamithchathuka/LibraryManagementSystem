@@ -41,7 +41,7 @@ namespace Library_Management_System
             string password = txt_password.Password;
 
             UserDetailController userContoller = new UserDetailController();
-            // Boolean result =  userContoller.checkUserLogin(username, password);
+           //  Boolean result =  userContoller.checkUserLogin(username, password);
             Boolean result = true;
             if (result)
             {
@@ -52,7 +52,7 @@ namespace Library_Management_System
             }
             else {
               
-                MessageBox.Show("Please check user name and password!", "Library MS", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Please check user name and password!", "Bookshelf Libarary management System ", MessageBoxButton.OK, MessageBoxImage.Error);
                 txt_password.Password = "";
                 txt_username.Text = "";
             }

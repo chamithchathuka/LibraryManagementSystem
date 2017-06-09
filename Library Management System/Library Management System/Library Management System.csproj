@@ -118,6 +118,9 @@
     <Compile Include="controller\MemberController.cs" />
     <Compile Include="controller\ReturnBookController.cs" />
     <Compile Include="controller\UserDetailController.cs" />
+    <Compile Include="Dialog.xaml.cs">
+      <DependentUpon>Dialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="entity\Book_Detail.cs" />
     <Compile Include="entity\Category.cs" />
     <Compile Include="Home.xaml.cs">
@@ -155,6 +158,10 @@
       <DependentUpon>View Book Details.xaml</DependentUpon>
     </Compile>
     <Page Include="Book Quick View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

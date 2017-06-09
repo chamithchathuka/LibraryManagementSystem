@@ -139,3 +139,5 @@ C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management Sys
 C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Book Quick View.g.cs
 C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Book Quick View.baml
 C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Dictionary1.baml
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Dialog.g.cs
+C:\Users\Chamith\Documents\GitHub\LibraryManagementSystem\Library Management System\Library Management System\obj\Debug\Dialog.baml

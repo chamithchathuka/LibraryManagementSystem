@@ -15,18 +15,19 @@ using System.Data.Entity.Migrations;
 using Microsoft.Win32;
 using System.IO;
 
+
 namespace Library_Management_System
 {
     /// <summary>
     /// Interaction logic for Add_Book.xaml
     /// </summary>
     /// 
-    
+
     public partial class Add_Book : Window
     {
         Book_Detail bk = null;
         Boolean isNewBookAdded = false;
-        BitmapImage image ;
+        BitmapImage image;
 
         controller.BookController bkcontoller = new controller.BookController();
         public Add_Book()
@@ -34,10 +35,10 @@ namespace Library_Management_System
 
             InitializeComponent();
             bk = new Book_Detail();
-                       
+
             bkcontoller.addBook(bk);
 
-            txt_bookid.Text = "BKID"+bk.book_id.ToString();
+            txt_bookid.Text = "BKID" + bk.book_id.ToString();
 
             fillLanguages();
             fillBookType();
@@ -46,13 +47,14 @@ namespace Library_Management_System
 
         private void fillLanguages()
         {
-                       
+
             cmb_languages.Items.Add("Englsh");
             cmb_languages.Items.Add("Sinahala");
             cmb_languages.Items.Add("Tamil");
         }
 
-        private void fillBookType() {
+        private void fillBookType()
+        {
 
             cmb_booktype.Items.Add("Book");
             cmb_booktype.Items.Add("Magazine");
@@ -60,9 +62,10 @@ namespace Library_Management_System
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (!isNewBookAdded) { 
-            Boolean result = bkcontoller.deletebyBookID(bk.book_id);
-                Console.Write("Closing event Called ......"+ result);   
+            if (!isNewBookAdded)
+            {
+                Boolean result = bkcontoller.deletebyBookID(bk.book_id);
+                Console.Write("Closing event Called ......" + result);
             }
         }
 
@@ -90,7 +93,7 @@ namespace Library_Management_System
         private void btn_addbook_Click(object sender, RoutedEventArgs e)
         {
 
-            string booknumber =  txt_booknumber.Text;
+            string booknumber = txt_booknumber.Text;
             string title = txt_title.Text;
             string author = txt_author.Text;
             //string category = cmb_category.SelectedValue.ToString();
@@ -105,7 +108,7 @@ namespace Library_Management_System
             string year = txt_year.Text;
             string noofPage = txt_no_of_pages.Text;
 
-         
+
             // string type = ((ComboBoxItem)cmb_booktype.SelectedItem).Content.ToString();
 
             string type = "Book";
@@ -115,7 +118,7 @@ namespace Library_Management_System
             decimal price = 10;
 
             string description = txt_description.Text;
-            int noofCopies = Int32.Parse(txt_no_of_copies.Text); 
+            int noofCopies = Int32.Parse(txt_no_of_copies.Text);
 
             bk.book_no = booknumber;
             bk.title = title;
@@ -132,14 +135,15 @@ namespace Library_Management_System
             bk.description = description;
             bk.no_of_copies = noofCopies;
 
-            if(image!=null)
-            bk.image=(imageToByteArray(image));
+            if (image != null)
+                bk.image = (imageToByteArray(image));
 
 
-            isNewBookAdded  = bkcontoller.updateBook(bk);
+            isNewBookAdded = bkcontoller.updateBook(bk);
             Console.Write("is book added" + isNewBookAdded);
 
-            if (isNewBookAdded) {
+            if (isNewBookAdded)
+            {
                 MessageBox.Show("Book added Successfully !", "Library MS", MessageBoxButton.OK, MessageBoxImage.Information);
             }
 
@@ -174,10 +178,34 @@ namespace Library_Management_System
             using (MemoryStream ms = new MemoryStream())
             {
                 encoder.Save(ms);
-               return data = ms.ToArray();
+                return data = ms.ToArray();
             }
         }
 
- 
+        
+
+        private void btn_addlanguage_Click_1(object sender, RoutedEventArgs e)
+        {
+            Dialog dialog = new Dialog("Add Language");
+            dialog.Show();
+            string answer = dialog.Answer;
+            if (!answer.Equals(""))
+            {
+                cmb_languages.Items.Add(answer);
+            }
+        }
+
+        private void btn_addbooktype_Click(object sender, RoutedEventArgs e)
+        {
+            Dialog dialog = new Dialog("Add Resource Category");
+            dialog.Show();
+            string answer = dialog.Answer;
+            if (!answer.Equals(""))
+            {
+               cmb_category.Items.Add(answer);
+            }
+        }
     }
-}
+
+        
+    }
